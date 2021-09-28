@@ -2,8 +2,8 @@
 #Folders containing relevant files for FF development for OBT,  Initially doing with fully glycolated sidechains
 
 # Filename keys for QCC calculations
-OT = oxythiophene
-OBT = oxy-bi-thiophene
+OT = oxythiophene \
+OBT = oxy-bi-thiophene \
 O0A = oxy-bi-thiophene with no alkylated bits on sidechains
 Xm = number of monomers in file 
 Xsc = number of atoms on the sidechains
