@@ -1,0 +1,12 @@
+#include "./OBT.ff/forcefield.itp"
+#include "mon.itp"
+
+[ system ]
+Struc
+
+[ molecules ]
+mon	1
+
+[ dihedral_restraints ]
+; ai   aj    ak    al   type  phi  dphi  kfac
+2 1 9 13 1 180 0 200

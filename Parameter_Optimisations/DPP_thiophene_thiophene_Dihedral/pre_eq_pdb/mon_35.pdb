@@ -1,0 +1,21 @@
+TITLE     GRoups of Organic Molecules in ACtion for Science
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.539  49.850  49.988  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.049  48.550  49.938  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.449  48.500  49.918  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.999  47.570  49.858  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.069  49.730  49.948  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.869  51.010  50.018  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.469  50.040  49.928  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.146  51.063  50.569  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.647  51.809  51.187  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.536  51.077  50.324  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.203  51.825  50.747  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.964  50.067  49.497  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.601  49.073  49.011  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.459  49.840  49.928  1.00  0.00           H
+HETATM   15  Hx2 D01     1      54.007  49.995  49.144  1.00  0.00           H
+TER
+ENDMDL

@@ -1,0 +1,37 @@
+TITLE     Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CS1  QM     1      47.820  50.335  50.084  1.00  0.00           C
+HETATM    2  CS2  QM     1      47.418  51.674  50.089  1.00  0.00           C
+HETATM    3  CS3  QM     1      46.018  51.837  50.088  1.00  0.00           C
+HETATM    4  CS4  QM     1      45.320  50.640  50.083  1.00  0.00           C
+HETATM    5  SS   QM     1      46.430  49.381  50.080  1.00  0.00           S
+HETATM    6  OS   QM     1      48.304  52.701  50.093  1.00  0.00           O
+HETATM    7  HS   QM     1      45.519  52.797  50.091  1.00  0.00           H
+HETATM    8  CD1  QM     1      49.210  49.820  50.084  1.00  0.00           C
+HETATM    9  CD2  QM     1      49.604  48.478  50.080  1.00  0.00           C
+HETATM   10  CD3  QM     1      51.001  48.303  50.081  1.00  0.00           C
+HETATM   11  CD4  QM     1      51.706  49.500  50.085  1.00  0.00           C
+HETATM   12  SD   QM     1      50.604  50.771  50.088  1.00  0.00           S
+HETATM   13  OD   QM     1      48.710  47.459  50.077  1.00  0.00           O
+HETATM   14  HD   QM     1      51.485  47.335  50.078  1.00  0.00           H
+HETATM   15  C0   QM     1      47.963  54.037  50.098  1.00  0.00           C
+HETATM   16  H01  QM     1      47.374  54.279  51.008  1.00  0.00           H
+HETATM   17  H02  QM     1      47.376  54.286  49.188  1.00  0.00           H
+HETATM   18  H03  QM     1      48.889  54.648  50.101  1.00  0.00           H
+HETATM   19  Caa  QM     1      49.037  46.120  50.073  1.00  0.00           C
+HETATM   20  Ha1  QM     1      49.622  45.866  50.983  1.00  0.00           H
+HETATM   21  Ha2  QM     1      49.624  45.871  49.163  1.00  0.00           H
+HETATM   22  Ha3  QM     1      48.105  45.518  50.071  1.00  0.00           H
+HETATM   23  CT1  QM     1      53.171  49.634  50.087  1.00  0.00           C
+HETATM   24  CT2  QM     1      54.005  49.518  48.980  1.00  0.00           C
+HETATM   25  CT3  QM     1      55.359  49.695  49.289  1.00  0.00           C
+HETATM   26  CT4  QM     1      55.595  49.948  50.634  1.00  0.00           C
+HETATM   27  ST1  QM     1      54.120  49.954  51.442  1.00  0.00           S
+HETATM   28  HT2  QM     1      53.652  49.313  47.978  1.00  0.00           H
+HETATM   29  HT3  QM     1      56.148  49.639  48.552  1.00  0.00           H
+HETATM   30  Hx   QM     1      44.243  50.537  50.081  1.00  0.00           H
+HETATM   31  Hy   QM     1      56.564  50.114  51.084  1.00  0.00           H
+TER
+ENDMDL

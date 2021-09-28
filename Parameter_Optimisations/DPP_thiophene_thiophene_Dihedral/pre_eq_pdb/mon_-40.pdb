@@ -1,0 +1,21 @@
+TITLE     GROningen Mixture of Alchemy and Childrens' Stories
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.539  49.861  50.158  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.049  48.561  50.108  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.449  48.511  50.088  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.999  47.581  50.028  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.069  49.741  50.118  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.869  51.021  50.188  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.469  50.051  50.098  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.128  51.070  49.431  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.619  51.785  48.787  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.525  51.079  49.631  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.183  51.810  49.166  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.976  50.077  50.457  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.624  49.097  50.999  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.459  49.851  50.098  1.00  0.00           H
+HETATM   15  Hx2 D01     1      54.049  49.901  50.641  1.00  0.00           H
+TER
+ENDMDL

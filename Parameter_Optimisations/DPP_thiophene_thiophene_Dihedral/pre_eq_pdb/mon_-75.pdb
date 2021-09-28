@@ -1,0 +1,21 @@
+TITLE     Good gRace! Old Maple Actually Chews Slate
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.524  49.932  50.202  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.034  48.632  50.152  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.434  48.582  50.132  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.984  47.652  50.072  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.054  49.812  50.162  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.854  51.092  50.232  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.454  50.122  50.142  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.223  50.622  49.105  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.820  50.831  48.114  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.583  50.807  49.433  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.316  51.182  48.722  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.895  50.460  50.726  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.456  49.890  51.555  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.444  49.922  50.142  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.931  50.467  51.106  1.00  0.00           H
+TER
+ENDMDL

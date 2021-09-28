@@ -1,0 +1,21 @@
+TITLE     Good ROcking Metal Altar for Chronical Sinners
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.500  50.019  49.937  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.010  48.719  49.887  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.410  48.669  49.867  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.960  47.739  49.807  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.030  49.899  49.897  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.830  51.179  49.967  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.430  50.209  49.877  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.402  49.917  50.818  1.00  0.00           C
+HETATM    9  HT6 D01     1      51.188  49.399  51.753  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.692  50.379  50.477  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.559  50.237  51.119  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.747  51.031  49.269  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.151  51.069  48.537  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.420  50.009  49.877  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.664  51.523  48.904  1.00  0.00           H
+TER
+ENDMDL

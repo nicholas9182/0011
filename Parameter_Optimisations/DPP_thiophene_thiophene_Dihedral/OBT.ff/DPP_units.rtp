@@ -1,0 +1,95 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms if 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove propers over the same bond as an improper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          2        0         3      0     1
+
+
+; all residues with fully alkylated sidechains			
+
+
+[ D01 ]
+
+[ atoms ]
+; DPP core
+; Thiophene 1
+ CT1	CR	+0.046	1      
+ CT2	CBU	+0.001	2		
+ CT3	CR	-0.144	3	
+ HT3	HR	+0.162	4	
+ CT4	CR	+0.102	5	
+ ST1	SR	-0.126	6		
+ 
+; Thiophene 2
+ CT5	CR	+0.073	7
+ CT6	CR	-0.158	8	
+ HT6	HR	+0.154	9
+ CT7	CR	-0.158	10
+ HT7	HR	+0.154	11
+ CT8	CR	+0.073	12
+ ST2	SR	-0.116	13
+
+; Terminals
+ Hx1	HR	-0.032	16	
+ Hx2	HR	-0.031	17
+
+[ bonds ] 
+; Thiophene 1
+ CT1	CT2
+ CT2	CT3
+ CT3	CT4
+ CT4	ST1
+ ST1	CT1
+ CT3	HT3
+
+; Thiophene 1 to thiophene 2
+ CT4	CT5
+ 
+; Thiophene 2
+ CT5	CT6
+ CT6	HT6	
+ CT6	CT7
+ CT7	HT7
+ CT7	CT8
+ CT8	ST2	
+ ST2	CT5
+
+; Terminals
+ CT1	Hx1
+ CT8	Hx2
+
+[ dihedrals ]
+ CT3	CT4	CT5	ST2
+
+[ Impropers ]			
+; Thiophene 1
+ CT1	CT2	CT3	CT4
+ CT2	CT3	CT4	ST1
+ CT3	CT4	ST1	CT1
+ CT4	ST1	CT1	CT2
+ ST1	CT1	CT2	CT3
+ 
+; Units off thiophene 1
+ CT1	ST1	CT2	Hx1
+ CT3	CT2	CT4	HT3	 
+ CT4	CT3	ST1	CT5
+
+; Thiophene 2
+ CT5	CT6	CT7	CT8
+ CT6	CT7	CT8	ST2
+ CT7	CT8	ST2	CT5
+ CT8	ST2	CT5	CT6
+ ST2	CT5	CT6	CT7
+
+; Units off thiophene 2
+ CT6	CT5	CT7	HT6
+ CT7	CT6	CT8	HT7
+ CT5	CT6	ST2	CT4
+ CT8	CT7	ST2	Hx2
+

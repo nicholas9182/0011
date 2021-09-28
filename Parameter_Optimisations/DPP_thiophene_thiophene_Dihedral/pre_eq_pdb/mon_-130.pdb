@@ -1,0 +1,21 @@
+TITLE     Giant Rising Ordinary Mutants for A Clerical Setup
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.496  50.055  50.172  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.006  48.755  50.122  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.406  48.705  50.102  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.956  47.775  50.042  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.026  49.935  50.132  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.826  51.215  50.202  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.426  50.245  50.112  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.408  49.792  49.248  1.00  0.00           C
+HETATM    9  HT6 D01     1      51.212  49.084  48.444  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.696  50.301  49.521  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.574  50.031  48.939  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.738  51.159  50.594  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.132  51.337  51.280  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.416  50.045  50.112  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.684  51.572  50.984  1.00  0.00           H
+TER
+ENDMDL

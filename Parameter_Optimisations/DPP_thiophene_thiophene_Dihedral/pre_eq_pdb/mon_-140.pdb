@@ -1,0 +1,21 @@
+TITLE     Green Red Orange Magenta Azure Cyan Skyblue
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.492  50.071  50.154  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.002  48.771  50.104  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.402  48.721  50.084  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.952  47.791  50.024  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.022  49.951  50.114  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.822  51.231  50.184  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.422  50.261  50.094  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.436  49.674  49.357  1.00  0.00           C
+HETATM    9  HT6 D01     1      51.269  48.838  48.677  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.713  50.229  49.588  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.612  49.869  49.093  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.715  51.257  50.500  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.084  51.539  51.085  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.412  50.061  50.094  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.646  51.735  50.849  1.00  0.00           H
+TER
+ENDMDL

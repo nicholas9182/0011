@@ -1,0 +1,21 @@
+TITLE     Gravel Rubs Often Many Awfully Cauterized Sores
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.496  50.040  49.949  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.006  48.740  49.899  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.406  48.690  49.879  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.956  47.760  49.819  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.026  49.920  49.909  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.826  51.200  49.979  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.426  50.230  49.889  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.431  49.783  50.730  1.00  0.00           C
+HETATM    9  HT6 D01     1      51.249  49.115  51.570  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.709  50.298  50.423  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.599  50.050  50.998  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.723  51.145  49.342  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.101  51.306  48.688  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.416  50.030  49.889  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.629  51.693  49.032  1.00  0.00           H
+TER
+ENDMDL

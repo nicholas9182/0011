@@ -1,0 +1,76 @@
+; Preprocessing
+include			= -I../more.lib
+define			= -DPOSRES 
+
+; Run control
+integrator		= md
+dt			= 0.001
+nsteps			= 10000 
+comm_mode		= linear
+nstcomm			= 10
+comm_grps		=
+
+; Output control
+nstxout         = 10
+nstvout         = 10
+nstenergy       = 10
+nstlog          = 10
+
+; Bonds
+constraints         = none
+constraint_algorithm	= LINCS
+continuation		= no
+lincs_order		= 4
+lincs_iter		= 1
+lincs_warnangle		= 30
+morse			= no
+
+
+; Neighbour searching
+nstlist			= 10
+ns_type			= grid
+rlist			= 1.0
+
+; Electrostatics
+cutoff-scheme		= Verlet
+coulombtype		= PME
+rcoulomb		= 1.0
+epsilon_r		= 1	
+
+; VdW
+vdwtype         = PME
+rvdw			= 1.0
+DispCorr                = No
+
+; Tables
+table-extension          = 10
+energygrp_table          = 
+
+; Ewald
+fourierspacing           = 0.12
+fourier_nx               = 0
+fourier_ny               = 0
+fourier_nz               = 0
+pme_order                = 4
+ewald_rtol               = 1e-05
+ewald_geometry           = 3d
+epsilon_surface          = 0
+optimize_fft             = no
+
+; Temperature coupling
+tcoupl			= v-rescale
+tc_grps			= system
+tau_t			= 0.1	
+ref_t			= 273
+
+; Pressure coupling
+pcoupl			= no
+
+; Velocity generation
+gen_vel			= yes		
+gen_temp		= 350
+gen_seed		= -1 	
+
+; Periodic boundary conditions
+pbc			= xyz
+

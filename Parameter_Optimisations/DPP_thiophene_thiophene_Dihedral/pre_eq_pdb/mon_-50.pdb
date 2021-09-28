@@ -1,0 +1,21 @@
+TITLE     Great Red Oystrich Makes All Chemists Sane
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.535  49.878  50.175  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.045  48.578  50.125  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.445  48.528  50.105  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.995  47.598  50.045  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.065  49.758  50.135  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.865  51.038  50.205  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.465  50.068  50.115  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.150  50.963  49.310  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.665  51.556  48.535  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.538  51.014  49.558  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.214  51.659  49.000  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.956  50.169  50.557  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.584  49.287  51.207  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.455  49.868  50.115  1.00  0.00           H
+HETATM   15  Hx2 D01     1      54.022  50.033  50.809  1.00  0.00           H
+TER
+ENDMDL

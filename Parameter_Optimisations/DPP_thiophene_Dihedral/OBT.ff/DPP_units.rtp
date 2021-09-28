@@ -1,0 +1,146 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms if 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove propers over the same bond as an improper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          2        0         3      0     1
+
+
+; all residues with fully alkylated sidechains			
+
+
+[ D01 ]
+
+[ atoms ]
+; DPP core
+; name type charge chargegroup
+ Cya	CN	+0.245	1
+ Cyb	CN!	-0.216	2
+ Cyc	CN	+0.628	3
+ Oyc	ON	-0.561	3
+ Nyd	NN	-0.528	4		
+ Cye	CN	+0.245	5	
+ Cyf	CN!	-0.216	6		
+ Cyg	CN	+0.628	7		
+ Oyg	ON	-0.561	7		
+ Nyh	NN	-0.528	8		
+ 
+; Thiophene 1
+ CT1	CR	+0.046	9	
+ CT2	CBU	+0.001	10	
+ CT3	CR	-0.144	11	
+ HT3	HR	+0.162	11	
+ CT4	CR	+0.102	12	
+ ST1	SR	-0.126	13		
+ 
+; Top sidechain
+ Ca	CL!	+0.070	14
+ Ha1	HL	+0.014	14
+ Ha2	HL	+0.014	14
+ Ha3	HL	+0.014	14
+
+; Bottom sidechain
+ Cb	CL!	+0.070	15		
+ Hb1	HL	+0.014	15		
+ Hb2	HL	+0.014	15	
+ Hb3	HL	+0.014	15	
+
+; Terminals
+ Hx1	HN	0.299	16	
+ Hx2	HR	0.300	17
+
+[ bonds ]
+; DPP unit
+ Cya	Cyb
+ Cyb	Cyc
+ Cyb	Cyf
+ Cyc	Oyc
+ Cyc	Nyd	
+ Nyd	Cye
+ Cye	Cyf
+ Cyf	Cyg
+ Cyg	Oyg
+ Cyg	Nyh
+ Nyh	Cya	
+ 
+; DPP to thiophene
+ Cya	CT1
+ 
+; Thiophene
+ CT1	CT2
+ CT2	CT3
+ CT3	CT4
+ CT4	ST1
+ ST1	CT1
+ CT3	HT3
+
+; DPP to side chains
+ Nyh	Ca
+ Nyd	Cb
+
+; Top sidechain
+ Ca	Ha1
+ Ca	Ha2
+ Ca	Ha3
+
+; Bottom sidechain
+ Cb	Hb1
+ Cb	Hb2
+ Cb	Hb3
+
+; Terminals
+ Cye	Hx1
+ CT4	Hx2
+
+[ exclusions ]
+ Oyc	CT2
+ Oyc	ST1
+
+[ dihedrals ]
+ Cyb	Cya	CT1	CT2
+
+[ Impropers ]			
+; DPP unit top ring
+ Cya	Cyb	Cyf	Cyg
+ Cyb	Cyf	Cyg	Nyh
+ Cyf	Cyg	Nyh	Cya	
+ Cyg	Nyh	Cya	Cyb
+ Nyh	Cya	Cyb	Cyf
+
+; DPP unit bottom ring
+ Cyb	Cyc	Nyd	Cye	
+ Cyc	Nyd	Cye	Cyf
+ Nyd	Cye	Cyf	Cyb
+ Cye	Cyf	Cyb	Cyc	
+ Cyf	Cyb	Cyc	Nyd	
+
+; Units off DPP
+ Cyc	Cyb	Nyd	Oyc	
+ Cyg	Nyh	Cyf	Oyg
+ Cya	Nyh	Cyb	CT1
+ Cye	Cyf	Nyd	Hx1
+
+; DPP inter ring 
+ Cyb	Cyf	Cyc	Cya	
+ Cyf	Cyb	Cye	Cyg	
+
+; Thiophene 
+ CT1	CT2	CT3	CT4
+ CT2	CT3	CT4	ST1
+ CT3	CT4	ST1	CT1
+ CT4	ST1	CT1	CT2
+ ST1	CT1	CT2	CT3
+ 
+; Units off thiophene
+ CT1	ST1	CT2	Cya
+ CT3	CT2	CT4	HT3	 
+ CT4	CT3	ST1	Hx2
+
+; Top sidechains
+ Nyh	Cya	Cyg	Ca
+ Nyd	Cyc	Cye	Cb

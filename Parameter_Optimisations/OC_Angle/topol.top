@@ -1,0 +1,12 @@
+#include "./OBT.ff/forcefield.itp"
+#include "mon.itp"
+
+[ system ]
+Struc
+
+[ molecules ]
+mon	1
+
+[ angle_restraints ]
+; i j k l            type    theta0     fc             mult
+ 1 2 2 6            1       54.5         3000  1

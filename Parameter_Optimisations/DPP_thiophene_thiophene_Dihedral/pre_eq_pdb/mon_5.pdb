@@ -1,0 +1,21 @@
+TITLE     Glycine aRginine prOline Methionine Alanine Cystine Serine
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.545  49.827  50.056  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.055  48.527  50.006  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.455  48.477  49.986  1.00  0.00           C
+HETATM    4  HT3 D01     1      49.005  47.547  49.926  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.075  49.707  50.016  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.875  50.987  50.086  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.475  50.017  49.996  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.099  51.246  50.123  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.552  52.181  50.241  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.507  51.188  50.052  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.139  52.070  50.124  1.00  0.00           H
+HETATM   12  CT8 D01     1      53.002  49.918  49.875  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.680  48.767  49.795  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.465  49.817  49.996  1.00  0.00           H
+HETATM   15  Hx2 D01     1      54.076  49.720  49.715  1.00  0.00           H
+TER
+ENDMDL

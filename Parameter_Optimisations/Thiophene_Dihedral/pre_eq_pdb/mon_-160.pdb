@@ -1,0 +1,37 @@
+TITLE     GROningen Mixture of Alchemy and Childrens' Stories
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CS1  QM     1      47.814  50.401  50.028  1.00  0.00           C
+HETATM    2  CS2  QM     1      47.412  51.740  50.033  1.00  0.00           C
+HETATM    3  CS3  QM     1      46.012  51.903  50.032  1.00  0.00           C
+HETATM    4  CS4  QM     1      45.314  50.706  50.027  1.00  0.00           C
+HETATM    5  SS   QM     1      46.424  49.447  50.024  1.00  0.00           S
+HETATM    6  OS   QM     1      48.298  52.767  50.037  1.00  0.00           O
+HETATM    7  HS   QM     1      45.513  52.863  50.035  1.00  0.00           H
+HETATM    8  CD1  QM     1      49.204  49.886  50.028  1.00  0.00           C
+HETATM    9  CD2  QM     1      49.598  48.544  50.024  1.00  0.00           C
+HETATM   10  CD3  QM     1      50.995  48.369  50.025  1.00  0.00           C
+HETATM   11  CD4  QM     1      51.700  49.566  50.029  1.00  0.00           C
+HETATM   12  SD   QM     1      50.598  50.837  50.032  1.00  0.00           S
+HETATM   13  OD   QM     1      48.704  47.525  50.021  1.00  0.00           O
+HETATM   14  HD   QM     1      51.479  47.401  50.022  1.00  0.00           H
+HETATM   15  C0   QM     1      47.957  54.103  50.042  1.00  0.00           C
+HETATM   16  H01  QM     1      47.368  54.345  50.952  1.00  0.00           H
+HETATM   17  H02  QM     1      47.370  54.352  49.132  1.00  0.00           H
+HETATM   18  H03  QM     1      48.883  54.714  50.045  1.00  0.00           H
+HETATM   19  Caa  QM     1      49.031  46.186  50.017  1.00  0.00           C
+HETATM   20  Ha1  QM     1      49.616  45.932  50.927  1.00  0.00           H
+HETATM   21  Ha2  QM     1      49.618  45.937  49.107  1.00  0.00           H
+HETATM   22  Ha3  QM     1      48.099  45.584  50.015  1.00  0.00           H
+HETATM   23  CT1  QM     1      53.165  49.700  50.031  1.00  0.00           C
+HETATM   24  CT2  QM     1      54.077  48.724  49.644  1.00  0.00           C
+HETATM   25  CT3  QM     1      55.409  49.139  49.754  1.00  0.00           C
+HETATM   26  CT4  QM     1      55.550  50.437  50.227  1.00  0.00           C
+HETATM   27  ST1  QM     1      54.019  51.072  50.508  1.00  0.00           S
+HETATM   28  HT2  QM     1      53.794  47.741  49.292  1.00  0.00           H
+HETATM   29  HT3  QM     1      56.249  48.510  49.496  1.00  0.00           H
+HETATM   30  Hx   QM     1      44.237  50.603  50.025  1.00  0.00           H
+HETATM   31  Hy   QM     1      56.488  50.952  50.386  1.00  0.00           H
+TER
+ENDMDL

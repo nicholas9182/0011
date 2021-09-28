@@ -1,0 +1,37 @@
+TITLE     Getting the Right Output Means no Artefacts in Calculating Stuff
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CS1  QM     1      47.824  50.290  50.080  1.00  0.00           C
+HETATM    2  CS2  QM     1      47.422  51.629  50.085  1.00  0.00           C
+HETATM    3  CS3  QM     1      46.022  51.792  50.084  1.00  0.00           C
+HETATM    4  CS4  QM     1      45.324  50.595  50.079  1.00  0.00           C
+HETATM    5  SS   QM     1      46.434  49.336  50.076  1.00  0.00           S
+HETATM    6  OS   QM     1      48.308  52.656  50.089  1.00  0.00           O
+HETATM    7  HS   QM     1      45.523  52.752  50.087  1.00  0.00           H
+HETATM    8  CD1  QM     1      49.214  49.775  50.080  1.00  0.00           C
+HETATM    9  CD2  QM     1      49.608  48.433  50.076  1.00  0.00           C
+HETATM   10  CD3  QM     1      51.005  48.258  50.077  1.00  0.00           C
+HETATM   11  CD4  QM     1      51.710  49.455  50.081  1.00  0.00           C
+HETATM   12  SD   QM     1      50.608  50.726  50.084  1.00  0.00           S
+HETATM   13  OD   QM     1      48.714  47.414  50.073  1.00  0.00           O
+HETATM   14  HD   QM     1      51.489  47.290  50.074  1.00  0.00           H
+HETATM   15  C0   QM     1      47.967  53.992  50.094  1.00  0.00           C
+HETATM   16  H01  QM     1      47.378  54.234  51.004  1.00  0.00           H
+HETATM   17  H02  QM     1      47.380  54.241  49.184  1.00  0.00           H
+HETATM   18  H03  QM     1      48.893  54.603  50.097  1.00  0.00           H
+HETATM   19  Caa  QM     1      49.041  46.075  50.069  1.00  0.00           C
+HETATM   20  Ha1  QM     1      49.626  45.821  50.979  1.00  0.00           H
+HETATM   21  Ha2  QM     1      49.628  45.826  49.159  1.00  0.00           H
+HETATM   22  Ha3  QM     1      48.109  45.473  50.067  1.00  0.00           H
+HETATM   23  CT1  QM     1      53.175  49.589  50.083  1.00  0.00           C
+HETATM   24  CT2  QM     1      53.956  50.050  49.029  1.00  0.00           C
+HETATM   25  CT3  QM     1      55.325  50.067  49.323  1.00  0.00           C
+HETATM   26  CT4  QM     1      55.625  49.620  50.603  1.00  0.00           C
+HETATM   27  ST1  QM     1      54.188  49.204  51.373  1.00  0.00           S
+HETATM   28  HT2  QM     1      53.555  50.367  48.075  1.00  0.00           H
+HETATM   29  HT3  QM     1      56.078  50.396  48.621  1.00  0.00           H
+HETATM   30  Hx   QM     1      44.247  50.492  50.077  1.00  0.00           H
+HETATM   31  Hy   QM     1      56.615  49.552  51.032  1.00  0.00           H
+TER
+ENDMDL

@@ -1,0 +1,21 @@
+TITLE     God Rules Over Mankind, Animals, Cosmos and Such
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.521  49.925  49.931  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.031  48.625  49.881  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.431  48.575  49.861  1.00  0.00           C
+HETATM    4  HT3 D01     1      48.981  47.645  49.801  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.051  49.805  49.891  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.851  51.085  49.961  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.451  50.115  49.871  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.267  50.535  50.908  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.902  50.706  51.920  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.609  50.755  50.531  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.370  51.098  51.229  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.862  50.508  49.203  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.389  49.986  48.402  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.441  49.915  49.871  1.00  0.00           H
+HETATM   15  Hx2 D01     1      53.841  50.715  48.739  1.00  0.00           H
+TER
+ENDMDL

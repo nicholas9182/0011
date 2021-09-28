@@ -1,0 +1,37 @@
+TITLE     Gromacs Runs One Microsecond At Cannonball Speeds
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CS1  QM     1      47.826  50.276  49.923  1.00  0.00           C
+HETATM    2  CS2  QM     1      47.424  51.615  49.928  1.00  0.00           C
+HETATM    3  CS3  QM     1      46.024  51.778  49.927  1.00  0.00           C
+HETATM    4  CS4  QM     1      45.326  50.581  49.922  1.00  0.00           C
+HETATM    5  SS   QM     1      46.436  49.322  49.919  1.00  0.00           S
+HETATM    6  OS   QM     1      48.310  52.642  49.932  1.00  0.00           O
+HETATM    7  HS   QM     1      45.525  52.738  49.930  1.00  0.00           H
+HETATM    8  CD1  QM     1      49.216  49.761  49.923  1.00  0.00           C
+HETATM    9  CD2  QM     1      49.610  48.419  49.919  1.00  0.00           C
+HETATM   10  CD3  QM     1      51.007  48.244  49.920  1.00  0.00           C
+HETATM   11  CD4  QM     1      51.712  49.441  49.924  1.00  0.00           C
+HETATM   12  SD   QM     1      50.610  50.712  49.927  1.00  0.00           S
+HETATM   13  OD   QM     1      48.716  47.400  49.916  1.00  0.00           O
+HETATM   14  HD   QM     1      51.491  47.276  49.917  1.00  0.00           H
+HETATM   15  C0   QM     1      47.969  53.978  49.937  1.00  0.00           C
+HETATM   16  H01  QM     1      47.380  54.220  50.847  1.00  0.00           H
+HETATM   17  H02  QM     1      47.382  54.227  49.027  1.00  0.00           H
+HETATM   18  H03  QM     1      48.895  54.589  49.940  1.00  0.00           H
+HETATM   19  Caa  QM     1      49.043  46.061  49.912  1.00  0.00           C
+HETATM   20  Ha1  QM     1      49.628  45.807  50.822  1.00  0.00           H
+HETATM   21  Ha2  QM     1      49.630  45.812  49.002  1.00  0.00           H
+HETATM   22  Ha3  QM     1      48.111  45.459  49.910  1.00  0.00           H
+HETATM   23  CT1  QM     1      53.177  49.575  49.926  1.00  0.00           C
+HETATM   24  CT2  QM     1      53.940  50.206  50.902  1.00  0.00           C
+HETATM   25  CT3  QM     1      55.313  50.176  50.634  1.00  0.00           C
+HETATM   26  CT4  QM     1      55.635  49.526  49.449  1.00  0.00           C
+HETATM   27  ST1  QM     1      54.213  48.986  48.735  1.00  0.00           S
+HETATM   28  HT2  QM     1      53.523  50.674  51.784  1.00  0.00           H
+HETATM   29  HT3  QM     1      56.055  50.618  51.285  1.00  0.00           H
+HETATM   30  Hx   QM     1      44.249  50.478  49.920  1.00  0.00           H
+HETATM   31  Hy   QM     1      56.633  49.391  49.055  1.00  0.00           H
+TER
+ENDMDL

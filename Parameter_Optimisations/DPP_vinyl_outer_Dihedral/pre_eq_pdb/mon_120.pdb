@@ -1,0 +1,26 @@
+TITLE     Getting the Right Output Means no Artefacts in Calculating Stuff
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT5 D01     1      45.611  50.396  50.530  1.00  0.00           C
+HETATM    2  CT6 D01     1      46.231  51.626  50.390  1.00  0.00           C
+HETATM    3  HT6 D01     1      45.681  52.556  50.250  1.00  0.00           H
+HETATM    4  CT7 D01     1      47.641  51.566  50.409  1.00  0.00           C
+HETATM    5  HT7 D01     1      48.271  52.446  50.299  1.00  0.00           H
+HETATM    6  CT8 D01     1      48.141  50.296  50.570  1.00  0.00           C
+HETATM    7  ST2 D01     1      46.821  49.146  50.699  1.00  0.00           S
+HETATM    8  CV1 D01     1      49.501  49.816  50.640  1.00  0.00           C
+HETATM    9  HV1 D01     1      49.778  49.297  51.560  1.00  0.00           H
+HETATM   10  CV2 D01     1      50.433  49.954  49.671  1.00  0.00           C
+HETATM   11  HV2 D01     1      50.163  50.462  48.750  1.00  0.00           H
+HETATM   12  CTh D01     1      51.798  49.481  49.709  1.00  0.00           C
+HETATM   13  CTg D01     1      52.737  49.633  48.713  1.00  0.00           C
+HETATM   14  HTg D01     1      52.507  50.138  47.779  1.00  0.00           H
+HETATM   15  CTf D01     1      53.999  49.071  49.026  1.00  0.00           C
+HETATM   16  HTf D01     1      54.849  49.089  48.357  1.00  0.00           H
+HETATM   17  CTe D01     1      54.024  48.490  50.262  1.00  0.00           C
+HETATM   18  STb D01     1      52.491  48.615  51.068  1.00  0.00           S
+HETATM   19  Hx1 D01     1      54.841  47.985  50.754  1.00  0.00           H
+HETATM   20  Hx2 D01     1      44.481  49.946  50.570  1.00  0.00           H
+TER
+ENDMDL

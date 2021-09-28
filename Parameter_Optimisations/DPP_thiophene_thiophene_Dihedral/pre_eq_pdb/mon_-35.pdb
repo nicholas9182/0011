@@ -1,0 +1,21 @@
+TITLE     Gromacs Runs One Microsecond At Cannonball Speeds
+REMARK    THIS IS A SIMULATION BOX
+CRYST1  100.000  100.000  100.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+HETATM    1  CT1 D01     1      46.540  49.854  50.149  1.00  0.00           C
+HETATM    2  CT2 D01     1      47.050  48.554  50.099  1.00  0.00           C
+HETATM    3  CT3 D01     1      48.450  48.504  50.079  1.00  0.00           C
+HETATM    4  HT3 D01     1      49.000  47.574  50.019  1.00  0.00           H
+HETATM    5  CT4 D01     1      49.070  49.734  50.109  1.00  0.00           C
+HETATM    6  ST1 D01     1      47.870  51.014  50.179  1.00  0.00           S
+HETATM    7  CT5 D01     1      50.470  50.044  50.089  1.00  0.00           C
+HETATM    8  CT6 D01     1      51.119  51.115  49.499  1.00  0.00           C
+HETATM    9  HT6 D01     1      50.598  51.884  48.928  1.00  0.00           H
+HETATM   10  CT7 D01     1      52.519  51.107  49.673  1.00  0.00           C
+HETATM   11  HT7 D01     1      53.170  51.875  49.259  1.00  0.00           H
+HETATM   12  CT8 D01     1      52.983  50.039  50.401  1.00  0.00           C
+HETATM   13  ST2 D01     1      51.640  49.017  50.884  1.00  0.00           S
+HETATM   14  Hx1 D01     1      45.460  49.844  50.089  1.00  0.00           H
+HETATM   15  Hx2 D01     1      54.059  49.847  50.549  1.00  0.00           H
+TER
+ENDMDL
