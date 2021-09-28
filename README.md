@@ -24,7 +24,7 @@ PC = Perchlorate \
 AN = Acetonitrile \
 CF = Chloroform \
 PF = Hexa fluoro phosphate \
-TA = TBA,  \
+TA = TBA
 
 ## OXYBITHIOPHENE UNITS ## 
 
@@ -45,7 +45,7 @@ NM = Glycolated with pentyl spacer, middle unit \
 NE = Glycolated with pentyl spacer, end unit \
 HI = Glycolated with hexyl spacer, first unit \
 HM = Glycolated with hexyl spacer, middle unit \
-HE = Glycolated with hexyl spacer, end unit \
+HE = Glycolated with hexyl spacer, end unit 
 
 ## MIXED SIDECHAIN LENGTH MONOMERS ## 
 
@@ -67,7 +67,7 @@ B5 = Glycolated with sidechain length 5, middle unit \
 C5 = Glycolated with sidechain length 5, last unit \
 A6 = Glycolated with sidechain length 6, start unit \
 B6 = Glycolated with sidechain length 6, middle unit \
-C6 = Glycolated with sidechain length 6, last unit \
+C6 = Glycolated with sidechain length 6, last unit 
 
 ## OXYBITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS ## 
 
@@ -98,7 +98,7 @@ CM = glycolated sidechains with thienothiophene backbone spacer and pentyl sc sp
 DI = glycolated sidechains with thiophene backbone spacer and hexyl sc spacer, first unit \
 DM = glycolated sidechains with thiophene backbone spacer and hexyl sc spacer, middle unit \
 FI = glycolated sidechains with thienothiophene backbone spacer and hexyl sc spacer, first unit \
-FM = glycolated sidechains with thienothiophene backbone spacer and hexyl sc spacer, middle unit \
+FM = glycolated sidechains with thienothiophene backbone spacer and hexyl sc spacer, middle unit 
 
 ## GLYCOLATED BITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS INVERTED ## 
 
@@ -150,7 +150,7 @@ FB = Thienophene backbone spacer and pentyl end, middle unit \
 OA = Thienophene backbone spacer and hexyl end, first unit \
 OB = Thienophene backbone spacer and hexyl end, middle unit \
 IA = Thienophene backbone spacer and heptyl end, first unit \
-IB = Thienophene backbone spacer and heptyl end, middle unit \
+IB = Thienophene backbone spacer and heptyl end, middle unit 
 
 ## NDI POLYMER UNITS ## 
 
@@ -158,7 +158,7 @@ I1 = glycolated bithiophene first unit \
 I2 = glycolated bithiophene middle unit \
 I3 = glycolated bithiophene end unit \
 I4 = NDI alkylated unit \
-I5 = NDI glycolated unit \
+I5 = NDI glycolated unit 
 
 ## DPP AND VINYL POLYMER UNITS ## 
 
@@ -176,7 +176,7 @@ D11 = gDPP-TTVTT middle unit \
 D12 = gDPP-TTVTT end unit \
 D13 = DPPTF monomer \
 D14 = DPPTT monomer \
-D15 = DPPTN monomer \
+D15 = DPPTN monomer 
 
 ## MONOMERS WITH NO PARTIAL CHARGES ## 
 
@@ -185,4 +185,4 @@ GMn = glycolated sidechains, middle unit \
 GEn = glycolated sidechains, end unit \
 AIn = alkylated sidechains, first unit \
 AMn = alkylated sidechains, middle unit \
-AEn = alkylated sidechains, end unit \
+AEn = alkylated sidechains, end unit 
