@@ -1,22 +1,9 @@
-#Folders containing relevant files for FF development for OBT,  Initially doing with fully glycolated sidechains \
- \
-# Filename keys for QCC calculations \
-OT = oxythiophene \
-OBT = oxy-bi-thiophene \
-O0A = oxy-bi-thiophene with no alkylated bits on sidechains \
-Xm = number of monomers in file  \
-Xsc = number of atoms on the sidechains \
-b = before a gaussian calculation \
-a = after a gaussian calculation \
-ir = results from IR calculation \
-ram = results from raman calculation \
-Sn = terminated with SN-(CH3)3 , Br = terminated with Br atoms \
- \
-#Code for residues -  \
- \
-################################## \
-## MONOMERS AND SMALL MOLECULES ## \
-################################## \
+## Folders containing relevant files for FF development for OBT ##
+
+## Residue names ##
+ 
+## MONOMERS AND SMALL MOLECULES ##
+
 GI = glycolated sidechains, first unit \
 GM = glycolated sidechains, middle unit \
 GE = glycolated sidechains, end unit \
@@ -38,10 +25,9 @@ AN = Acetonitrile \
 CF = Chloroform \
 PF = Hexa fluoro phosphate \
 TA = TBA,  \
- \
-########################## \
-## OXYBITHIOPHENE UNITS ## \
-########################## \
+
+## OXYBITHIOPHENE UNITS ## 
+
 MI = Glycolated with methyl spacer, first unit \
 MM = Glycolated with methyl spacer, middle unit \
 ME = Glycolated with methyl spacer, end unit \
@@ -60,10 +46,9 @@ NE = Glycolated with pentyl spacer, end unit \
 HI = Glycolated with hexyl spacer, first unit \
 HM = Glycolated with hexyl spacer, middle unit \
 HE = Glycolated with hexyl spacer, end unit \
- \
-##################################### \
-## MIXED SIDECHAIN LENGTH MONOMERS ## \
-##################################### \
+
+## MIXED SIDECHAIN LENGTH MONOMERS ## 
+
 A0 = Glycolated with sidechain length 0, start unit \
 B0 = Glycolated with sidechain length 0, middle unit \
 C0 = Glycolated with sidechain length 0, last unit \
@@ -83,10 +68,9 @@ C5 = Glycolated with sidechain length 5, last unit \
 A6 = Glycolated with sidechain length 6, start unit \
 B6 = Glycolated with sidechain length 6, middle unit \
 C6 = Glycolated with sidechain length 6, last unit \
- \
-######################################################### \
-## OXYBITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS ## \
-######################################################### \
+
+## OXYBITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS ## 
+
 OI = glycolated sidechains with thiophene backbone spacer, first unit \
 OM = glycolated sidechains with thiophene backbone spacer, middle unit  \
 II = glycolated sidechains with thienothiophene backbone spacer, first unit \
@@ -115,10 +99,9 @@ DI = glycolated sidechains with thiophene backbone spacer and hexyl sc spacer, f
 DM = glycolated sidechains with thiophene backbone spacer and hexyl sc spacer, middle unit \
 FI = glycolated sidechains with thienothiophene backbone spacer and hexyl sc spacer, first unit \
 FM = glycolated sidechains with thienothiophene backbone spacer and hexyl sc spacer, middle unit \
- \
-################################################################## \
-## GLYCOLATED BITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS INVERTED ## \
-################################################################## \
+
+## GLYCOLATED BITHIOPHENES WITH BACKBONE AND SIDECHAIN SPACERS INVERTED ## 
+
 M1 = Methyl end, first unit \
 M2 = Methyl end, middle unit \
 M3 = Methyl end, end unit \
@@ -168,19 +151,17 @@ OA = Thienophene backbone spacer and hexyl end, first unit \
 OB = Thienophene backbone spacer and hexyl end, middle unit \
 IA = Thienophene backbone spacer and heptyl end, first unit \
 IB = Thienophene backbone spacer and heptyl end, middle unit \
- \
-####################### \
-## NDI POLYMER UNITS ## \
-####################### \
+
+## NDI POLYMER UNITS ## 
+
 I1 = glycolated bithiophene first unit \
 I2 = glycolated bithiophene middle unit \
 I3 = glycolated bithiophene end unit \
 I4 = NDI alkylated unit \
 I5 = NDI glycolated unit \
- \
-################################# \
-## DPP AND VINYL POLYMER UNITS ## \
-################################# \
+
+## DPP AND VINYL POLYMER UNITS ## 
+
 D01 = DPP-TTT first unit \
 D02 = DPP-TTT middle unit \
 D03 = DPP-TTT end unit \
@@ -196,15 +177,12 @@ D12 = gDPP-TTVTT end unit \
 D13 = DPPTF monomer \
 D14 = DPPTT monomer \
 D15 = DPPTN monomer \
- \
-###################################### \
-## MONOMERS WITH NO PARTIAL CHARGES ## \
-###################################### \
+
+## MONOMERS WITH NO PARTIAL CHARGES ## 
+
 GIn = glycolated sidechains, first unit \
 GMn = glycolated sidechains, middle unit \
 GEn = glycolated sidechains, end unit \
 AIn = alkylated sidechains, first unit \
 AMn = alkylated sidechains, middle unit \
 AEn = alkylated sidechains, end unit \
- \
- \
