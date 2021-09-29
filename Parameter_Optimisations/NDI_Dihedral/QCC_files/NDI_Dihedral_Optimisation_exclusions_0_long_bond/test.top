@@ -1,0 +1,14 @@
+
+; Include forcefield parameters
+#include "OBT.ff/forcefield.itp"
+
+; Include geometry parameters
+#include "NDIT2.itp"
+
+[ system ]
+; Name
+triple crown ether test
+
+[ molecules ]
+; Compound        #mols
+NDIT2		1

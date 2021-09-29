@@ -1,0 +1,175 @@
+---
+title: "Plotting Free Energy Differences"
+author: "Nick"
+date: "21/07/2020"
+output: pdf_document
+editor_options: 
+  chunk_output_type: inline
+chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r Load Packages, include=TRUE}
+library(tidyverse)
+library(Rpdb)
+library(broom)   
+library(pracma)
+theme_set(theme_light(base_size = 10))
+library(plotly)
+source("~/Dropbox/library/R_functions.R")
+```
+
+```{r functions}
+
+RB <- function(C0,C1,C2,C3,C4,C5,Angle){
+	V <-    C0*cos(Angle*0.0174533)^0 +
+		-C1*cos(Angle*0.0174533)^1 +
+		C2*cos(Angle*0.0174533)^2 +
+		-C3*cos(Angle*0.0174533)^3 +
+		C4*cos(Angle*0.0174533)^4 +
+		-C5*cos(Angle*0.0174533)^5
+	return(V)
+}
+
+RB_fit <- function(D) {
+	nls(Energy~RB(C0,C1,C2,C3,C4,C5,Angle),
+		start=list(C0=0,C1=0,C2=0,C3=0,C4=0,C5=0),
+		weights=( boltz_invert(Angle, Energy)^2  ),
+		data=D,
+		nls.control(maxiter=1000))
+}
+
+```
+
+```{r Import Data}
+ 
+a <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_b3lyp_methyl/NDI.txt")                %>% mutate(Functional="b3lyp", Sidechain="Methyl", Res="low"  , restrain="none" )  	  
+b <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_b3lyp_prot/NDI.txt")                  %>% mutate(Functional="b3lyp", Sidechain="Proton", Res="low"  , restrain="none" )  	  
+c <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_wb97xd_methyl/NDI.txt")               %>% mutate(Functional="wb97xd", Sidechain="Methyl", Res="low" , restrain="none" )  	  
+d <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_wb97xd_prot/NDI.txt")                 %>% mutate(Functional="wb97xd", Sidechain="Proton", Res="low" , restrain="none" )  	  
+e <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_wb97xd_methyl_hd/NDI.txt")            %>% mutate(Functional="wb97xd", Sidechain="Methyl", Res="high", restrain="none" ) 	  
+f <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_b3lyp_methyl_hd/NDI.txt")             %>% mutate(Functional="b3lyp", Sidechain="Methyl", Res="high" , restrain="none" ) 	 
+g <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_wb97xd_methyl_hd_restraints/NDI.txt") %>% mutate(Functional="wb97xd", Sidechain="Methyl", Res="high", restrain="yes" ) 	  
+h <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_b3lyp_methyl_hd_restraints/NDI.txt")  %>% mutate(Functional="b3lyp", Sidechain="Methyl", Res="high" , restrain="yes" ) 	 
+i <- read.table("~/Dropbox/OBT/0060/NDI_Dihedral_scan_MP2_methyl_hd/NDI.txt")               %>% mutate(Functional="MP2", Sidechain="Methyl", Res="high" , restrain="none" )
+
+ data <- rbind(a,b,c,d,e,f,g,h,i) %>%  
+	rename(Angle=V1, Energy=V2) %>%
+	mutate(Angle = round(Angle)) %>%
+	mutate(Energy= if_else( !(Functional=="MD_DOF_off") ,Energy*27211.4/10.36, Energy)) %>%
+  group_by(Functional, Sidechain) %>%  
+	mutate(Energy = Energy - min(Energy)) %>%
+	mutate(Angle = ifelse((Angle>180 & Angle<=360),Angle-360,Angle)) %>%
+	arrange(Angle)
+
+
+```    
+
+```{r plot ld energy, fig.width=12}
+
+data %>% 
+	filter(Res=="low") %>% 
+  ggplot(aes(x=Angle, y=Energy, color=Functional, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.15) +
+  geom_point(size=4) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="E (KJ/mol)") +
+  ggsave("dihedral_scans.pdf", width=12)
+
+```
+
+
+```{r plot hd energy, fig.width=15}
+
+data %>%
+	filter(Res=="high") %>% 
+  filter(restrain=="none") %>%
+	filter(Energy < 50) %>% 
+	ggplot(aes(x=Angle, y=Energy, color=Functional, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.14) +
+  geom_point( size=3) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="E (KJ/mol)") +
+  ggsave("dihedral_scans_hd.pdf", width=12)
+
+```
+
+```{r plot hd energy, fig.width=12}
+
+data %>% 
+	filter(Res=="high") %>% 
+	filter(Energy < 50) %>% 
+	filter(restrain=="none") %>% 
+	mutate(pop = boltz_invert(Angle, Energy)) %>% 
+  ggplot(aes(x=Angle, y=pop, color=Functional, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.15) +
+  geom_point(size=4) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="P(E)") +
+  ggsave("dihedral_scans_hd_pop.pdf", width=12)
+
+```
+
+
+
+
+
+
+```{r plot hd energy, fig.width=12}
+
+data %>% 
+	filter(Res=="high") %>% 
+  filter(Functional=="b3lyp") %>% 
+	ggplot(aes(x=Angle, y=Energy, color=restrain, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.15) +
+  geom_point( size=4) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="E (KJ/mol)") +
+  ggsave("dihedral_scans_hd_restrained.pdf", width=12)
+
+```
+
+
+```{r plot hd energy and fit, fig.width=12}
+
+data %>%
+	filter(Res=="high") %>% 
+	filter(Functional=="b3lyp") %>%
+  filter(restrain=="none") %>%
+	filter(Energy < 50) %>% 
+	ggplot(aes(x=Angle, y=Energy, color=Functional, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.14) +
+  geom_point( size=3) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="E (KJ/mol)") 
+
+data %>%
+	filter(Res=="high") %>% 
+	filter(Functional=="b3lyp") %>%
+	filter(!(Angle>1 & Angle<11)) %>% 
+	filter(!(Angle>149 & Angle<151)) %>% 
+  filter(restrain=="none") %>%
+	filter(Energy < 50) %>% print() %>% 
+	ggplot(aes(x=Angle, y=Energy, color=Functional, shape=Sidechain)) +
+  geom_smooth(se=FALSE,span=0.14) +
+  geom_point( size=3) +
+  labs(x=expression(phi~'(SS-CS4-Cya-Cyb) / '*degree*''), y="E (KJ/mol)") 
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

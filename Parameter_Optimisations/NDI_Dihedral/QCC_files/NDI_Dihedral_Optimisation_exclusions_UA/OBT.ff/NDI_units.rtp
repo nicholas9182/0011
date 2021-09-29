@@ -1,0 +1,262 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms if 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove propers over the same bond as an improper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          2        0         3      0     1
+
+
+; all residues with fully alkylated sidechains			
+
+
+[ I1 ]
+
+[ atoms ]
+; NDI core
+; name type charge chargegroup
+ Cya	CN	+0.249	1
+ Cyb	CN	-0.060	2
+ Hyb	HN	+0.092	2
+ Cyc	CN	-0.152	3
+ Cyd	CN	+0.603	4
+ Oyd	ON	-0.507	4
+ Nye	NN	-0.332	5
+ Cyf	CN	+0.545	6
+ Oyf	ON	-0.488	6
+ Cyg	CN	-0.292	7
+ Cyh	CN	+0.249	8
+ Cyi	CN	-0.060	9
+ Hyi	HN	+0.092	9
+ Cyj	CN	-0.152	10
+ Cyk	CN	+0.603	11
+ Oyk	ON	-0.507	11
+ Nyl	NN	-0.332	12
+ Cym	CN	+0.545	13
+ Oym	ON	-0.488	13
+ Cyn	CN	-0.292	14
+ Cyo	CN	+0.081	15
+ Cyp	CN	+0.081	16
+
+; Left sidechain 			
+ C0	CL!	+0.070	15
+ H01	HL	+0.014	15
+ H02	HL	+0.014	15
+ H03	HL	+0.014	15
+				
+; Right sidechain 			
+ Caa	CL!	+0.070	29
+ Ha1	HL	+0.014	29
+ Ha2	HL	+0.014	29
+ Ha3	HL	+0.014	29
+
+; Terminal
+ HTe	HN	+0.202	30
+
+[ bonds ]
+; NDI core
+ Cya 	Cyb
+ Cyb	Hyb
+ Cyb	Cyc
+ Cyc	Cyd
+ Cyd	Oyd
+ Cyd	Nye
+ Nye	Cyf
+ Cyf	Oyf
+ Cyf	Cyg
+ Cyg	Cyh
+ Cyh	Cyi
+ Cyi	Hyi
+ Cyi	Cyj
+ Cyj	Cyk
+ Cyk	Oyk
+ Cyk	Nyl
+ Nyl	Cym
+ Cym	Oym
+ Cym	Cyn
+ Cyn	Cyo
+ Cyn	Cya
+ Cyo	Cyp
+ Cyo	Cyj
+ Cyp	Cyc
+ Cyp	Cyg
+ 
+; Terminal
+ Cyh	HTe
+
+; Bonds to sidechains			
+ Nyl	C0		
+ Nye	Caa		
+			
+; Left Sidechain			
+ C0	C1		
+ C0	H01		
+ C0	H02		
+ C0	H03		
+			
+; Right Sidechain			
+ Caa	Cb		
+ Caa	Ha1		
+ Caa	Ha2		
+ Caa	Ha3		
+
+; NDI-thiophene			
+ Cya	+CS4		
+
+[ dihedrals ]
+ Cyb	Cya	+CS4	+SS
+
+ 
+
+[ Impropers ]			
+; right ring
+ Cya	Cyb	Cyc	Cyp
+ Cyb	Cyc	Cyp	Cyo
+ Cyc	Cyp	Cyo	Cyn
+ Cyp	Cyo	Cyn	Cya
+ Cyo	Cyn	Cya	Cyb
+ Cyn	Cya	Cyb	Cyc
+ Cyb	Cya	Cyc	Hyb
+ Cya	Cyn	Cyb	+CS4
+
+; left ring
+ Cyp	Cyo	Cyj	Cyi
+ Cyo	Cyj	Cyi	Cyh
+ Cyj	Cyi	Cyh	Cyg
+ Cyi	Cyh	Cyg	Cyp
+ Cyh	Cyg	Cyp	Cyo
+ Cyi	Cyh	Cyj	Hyi
+
+; top ring
+ Cyo	Cyj	Cyk	Nyl
+ Cyj	Cyk	Nyl	Cym
+ Cyk	Nyl	Cym	Cyn
+ Nyl	Cym	Cyn	Cyo
+ Cyk	Nyl	Cyj	Oyk
+ Nyl	Cym	Cyk	C0
+ Cym	Cyn	Nyl	Oym
+
+; bottom ring
+ Cyp	Cyc	Cyd	Nye
+ Cyc	Cyd	Nye	Cyf
+ Cyd	Nye	Cyf	Cyg
+ Nye	Cyf	Cyg	Cyp
+ Cyd	Nye	Cyc	Oyd
+ Nye	Cyd	Cyf	Caa
+ Cyf	Cyg	Nye	Oyf
+
+
+; Terminal
+ Cyh	Cyi	Cyg	HTe
+
+ 
+						
+[ I4 ]			
+
+[ atoms ]			
+; Left thiophene unit (Sinister)			
+; name type charge chargegroup			
+ CS1	CAA	-0.064	1
+ CS2 	CBB	+0.376	2
+ CS3	CBU	-0.116	3
+ CS4	CE	-0.057	4
+ SS	ST 	-0.044	5
+ OS	OT 	-0.260	6
+			
+			
+; Right thiophene unit (Dextrose) 			
+ CD1	CAA	-0.064	7
+ CD2	CBB	+0.376	8
+ CD3	CBU	-0.116	9
+ CD4	CE	-0.057	10
+ SD	ST 	-0.044	11
+ OD	OT 	-0.260	12
+				
+; Left sidechain 			
+ C0	CL!	+0.070	15
+ H01	HL	+0.014	15
+ H02	HL	+0.014	15
+ H03	HL	+0.014	15
+				
+; Right sidechain 			
+ Caa	CL!	+0.070	29
+ Ha1	HL	+0.014	29
+ Ha2	HL	+0.014	29
+ Ha3	HL	+0.014	29
+				
+; Terminal			
+ HTe	HT 	+0.202	10
+			
+[ bonds ]			
+; Left Thiophene			
+ CS1	CS2		
+ CS2	CS3		
+ CS3	CS4		
+ CS4	SS		
+ SS	CS1		
+ CS2	OS		
+			
+; Right Thiophene			
+ CD1	CD2		
+ CD2	CD3		
+ CD3	CD4		
+ CD4	SD		
+ SD	CD1		
+ CD2	OD		
+ CD4	HTe		
+			
+; Bonds to sidechains			
+ OS	C0		
+ OD	Caa		
+			
+; thiophene-thiophene			
+ CS1	CD1		
+ OS	SD		
+ OD	SS		
+			
+; Left Sidechain			
+ C0	C1		
+ C0	H01		
+ C0	H02		
+ C0	H03		
+			
+; Right Sidechain			
+ Caa	Cb		
+ Caa	Ha1		
+ Caa	Ha2		
+ Caa	Ha3	
+		
+		
+[ dihedrals ]
+ CS2	CS1	CD1	SD	
+
+						
+[ Impropers ]			
+; Left thiophene			
+ CS1	SS	CS4	CS3
+ CS2	CS1	SS	CS4
+ CS3	CS2	CS1	SS
+ CS4	CS3	CS2	CS1
+ SS	CS4	CS3	CS2
+ 			
+ CS2	CS3	CS1	OS
+ CS1	SS	CS2	CD1
+			
+			
+; Right thiophene			
+ CD1	SD	CD4	CD3
+ CD2	CD1	SD	CD4
+ CD3	CD2	CD1	SD
+ CD4	CD3	CD2	CD1
+ SD	CD4	CD3	CD2
+			
+ CD2	CD3	CD1	OD
+ CD1	SD	CD2	CS1
+ CD4	CD3	SD	HTe
+			
+; between monomers			
+ CS4	CS3	SS	-Cya
