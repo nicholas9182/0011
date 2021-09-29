@@ -1,5 +1,5 @@
 #include "OBT.ff/forcefield.itp"
-#include "hex14_T_inverted.itp"
+#include "hep14_T_inverted.itp"
 
 [ system ]
 test
