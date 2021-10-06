@@ -186,3 +186,9 @@ GEn = glycolated sidechains, end unit \
 AIn = alkylated sidechains, first unit \
 AMn = alkylated sidechains, middle unit \
 AEn = alkylated sidechains, end unit 
+
+## pBTTT ##
+
+T1 = pBTTT first unit
+T2 = pBTTT middle unit
+T3 = pbTTT end unit

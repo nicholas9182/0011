@@ -112,6 +112,7 @@
  CR	HR	1	0.10800 307105.6        ; opls CA to HA
  CE	CR	1	0.14000 392459.2        ; opls CA to CA
  CR	CBU	1	0.14000 392459.2        ; opls CA to CD
+ CR	CL!	1	0.14000 392459.2        ; opls CA to CD
 
 ; Backbone thienothiophene spacer
  CRR	CRR	1	0.14000 392459.2        ; opls CA to CA
@@ -244,6 +245,8 @@
  CR	CR	CR	1	112.50  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
  CR	SR	CR	1	 91.00  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
  HR	CR	CR	1	124.00  292.88  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
+ HR	CR	CL!	1	124.00  292.88  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
+ CR	CL!	HL	1	124.00  292.88  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
  SR	CR	CR	1       112.00  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602 
  CR     CR      CE	1       129.00  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
  SR     CR      CE      1       119.00  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
@@ -253,6 +256,8 @@
  SR	CR	CBU	1       112.00  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602 
  CR	CR	CBU	1	112.50  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
  CR	CBU	CR	1	112.50  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
+ CR	CL!	CL	1	115.440	502.666	; Bhatta J Phys Chem - check with QCC (changed C to O)
+ CR	CR	CL!	1	115.440	502.666	; Bhatta J Phys Chem - check with QCC (changed C to O)
 
 ; backbone thienothiophene spacer
  CRR 	CRR	CRR	1	112.50  502.08  ;   Moreno J Phys Chem B 2010, 114, 4, 1591-1602
@@ -377,6 +382,7 @@
 
 ; Backbone thiophene spacer
  CR	SR	CR	CR	2	0	391.47000       ;   Taken from drews params for PFO
+ CR	CR	CR	CL!	2	0	391.47000       ;   Taken from drews params for PFO
  CR	CR	CR	CR	2	0	391.47000       ;   Taken from drews params for PFO 
  CR	CR	CR	HR	2	0	391.47000       ;   Taken from drews params for PFO
  CR     CR      CR      SR      2       0       391.47000       ;   Taken from drews params for PFO
@@ -395,7 +401,9 @@
  CRR    CRR     CRR     HRR     2       0       391.47000       ;   Taken from drews params for PFO
  CRR    CRR     CRR     SRR     2       0       782.94000       ;   Taken from drews params for PFO, doubled to keep group planar
  CRR    SRR     CRR     CE      2       0       391.47000       ;   Taken from drews params for PFO
+ CRR    SRR     CRR     CR      2       0       391.47000       ;   Taken from drews params for PFO
  CRR    ST      CBB     CE      2       0       391.47000       ;   Taken from drews params for PFO
+ CRR    ST      CBB     CR      2       0       391.47000       ;   Taken from drews params for PFO
  CE     SRR     CRR     CRR     2       0       391.47000       ;   Taken from drews params for PFO
  CRR    SRR     CRR     HRR     2       0       391.47000       ;   Taken from drews params for PFO
  SRR    CRR     CRR     SRR     2       0       391.47000       ;   Taken from drews params for PFO
@@ -484,10 +492,14 @@
  CBB	OT	CG!	CG	3        1.715		2.845		1.046		-5.607		-0.000		0.000   ; from Drew   
  CBB	OT	CG!	HG	3        1.715		2.845		1.046		-5.607		-0.000		0.000   ; from Drew   
  CAA	CBB	OT	CG!	3	 1.3284		4.7153		59.1743		-93.2906	28.1114		0.000	; Bhatta J Phys Chem 
- OT	CG!	CG	OG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000   ; from Drew
+ OT	CG!	CG	OG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000   ; from Drew 
 
 ; thiophene - alkyl sidechain
  CBB	CBB	OT	CL!	3	 1.3284		4.7153		59.1743		-93.290		28.111		0.000	; Bhatta J Phys Chem
+ CR	CR	CL!	HL	3        1.715		2.845		1.046		-5.607		-0.000		0.000   ; from Drew  
+ CR	CL!	CL	HL	3        1.715		2.845		1.046		-5.607		-0.000		0.000   ; from Drew  
+ CR	CR	CL!	CL	3	 1.3284		4.7153		59.1743		-93.2906	28.1114		0.000	; Bhatta J Phys Chem 
+ CR	CL!	CL	CL	3	 1.3284		4.7153		59.1743		-93.2906	28.1114		0.000	; Bhatta J Phys Chem 
  CBB	OT	CL!	CL	3        1.715		2.845		1.046		-5.607		-0.000		0.000	; from Drew   
  CBB	OT	CL!	HL	3        1.715		2.845		1.046		-5.607		-0.000		0.000 	; from Drew   
  CAA	CBB	OT	CL!	3	 1.3284		4.7153		59.1743		-93.290		28.111		0.000	; Bhatta J Phys Chem

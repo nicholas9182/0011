@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "hep14_TT_inverted.itp"
+#include "pBTTT.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-h14 		1
+pBTTT 		1
