@@ -1,5 +1,5 @@
 #include "OBT.ff/forcefield.itp"
-#include "pBTTT.itp"
+#include "pBTTT_uhw.itp"
 
 [ system ]
 test

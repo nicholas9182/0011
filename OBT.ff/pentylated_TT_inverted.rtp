@@ -344,6 +344,7 @@ CD3	HD
 
  CT2    CT3     CT1     HT2
  CT5    CT4     CT6     HT5
+ CT1	CT2	ST1	CD4
 
 ; between monomers
  CT6	ST2	CT5	+CS4	
@@ -691,6 +692,7 @@ CD3	HD
 
  CT2    CT3     CT1     HT2
  CT5    CT4     CT6     HT5
+ CT1	CT2	ST1	CD4
 
 ; between monomers
  CS4	CS3	SS	-CT6

@@ -65,6 +65,10 @@
  CTA	12.01100	0.000	A	0.276	0.350	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020
  HTA	1.00800		0.000	A	0.125	0.250	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020
 
+; Substrate Calculations
+; Gold
+ Au     196.96657       0.000   A       0.356   0.267   ; K. S. S. Liu,† C. W. Yong, J. Phys. Chem. B 1999, 103, 3195-3205
+
 [ bondtypes ]
 ;  i    j func        b0          kb
 ; thiophene
