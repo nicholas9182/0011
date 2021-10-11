@@ -133,7 +133,7 @@
  HT3	HR	+0.143	35
  
 ; Terminal
- HTe	HT	+0.169	4
+ HTe	HT	+0.146	4
 
 [ bonds ]
 ; Left Thiophene
@@ -372,15 +372,15 @@ CD3	HD
  Op 	OG	-0.390	21
  Cq 	CG	+0.012	22
  Hq1 	HG	+0.089	22
- Hq2	HG	+0.089	22
+ Hq2	HG	+0.088	22
  Cs	CG	+0.005	23
  Hs1	HG	+0.099	23
  Hs2	HG	+0.099	23
  Ou	OG	-0.390	24
  Cw	CG	+0.012	25
- Hw1	HG	+0.099	25
- Hw2	HG	+0.099	25
- Hw3	HG	+0.099	25
+ Hw1	HG	+0.100	25
+ Hw2	HG	+0.100	25
+ Hw3	HG	+0.100	25
 
 
  
@@ -417,14 +417,14 @@ CD3	HD
  Hk2	HG	+0.089	30
  Ol 	OG	-0.390	31
  Cm 	CG	+0.012	32
- Hm1 	HG	+0.089	32
- Hm2	HG	+0.089	32
+ Hm1 	HG	+0.090	32
+ Hm2	HG	+0.090	32
  Cn	CG	+0.005	33
  Hn1	HG	+0.099	33
  Hn2	HG	+0.099	34
  Oo	OG	-0.390	35
  Cp	CG	+0.012	36
- Hp1	HG	+0.099	36
+ Hp1	HG	+0.100	36
  Hp2	HG	+0.100	36
  Hp3	HG	+0.100	36
 

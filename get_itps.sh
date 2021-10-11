@@ -44,7 +44,7 @@ make_and_em() {
 #make_and_em pro14_TT.pdb pro14_TT p14TT
 #make_and_em but14_TT.pdb but14_TT b14TT
 #make_and_em pen14_TT.pdb pen14_TT p14TT
-#make_and_em hex14_TT.pdb hex14_TT h14TT
+make_and_em hex14_TT.pdb hex14_TT h14TT
 
 #make_and_em gly14_T_inverted.pdb gly14_T_inverted g14T
 #make_and_em met14_T_inverted.pdb met14_T_inverted m14T
@@ -53,7 +53,7 @@ make_and_em() {
 #make_and_em but14_T_inverted.pdb but14_T_inverted b14T
 #make_and_em pen14_T_inverted.pdb pen14_T_inverted p14T
 #make_and_em hex14_T_inverted.pdb hex14_T_inverted h14T
-make_and_em hep14_T_inverted.pdb hep14_T_inverted h14T
+#make_and_em hep14_T_inverted.pdb hep14_T_inverted h14T
 
 #make_and_em gly14_TT_inverted.pdb gly14_TT_inverted g14TT
 #make_and_em met14_TT_inverted.pdb met14_TT_inverted m14TT
@@ -62,7 +62,7 @@ make_and_em hep14_T_inverted.pdb hep14_T_inverted h14T
 #make_and_em but14_TT_inverted.pdb but14_TT_inverted b14TT
 #make_and_em pen14_TT_inverted.pdb pen14_TT_inverted p14TT
 #make_and_em hex14_TT_inverted.pdb hex14_TT_inverted h14TT
-make_and_em hep14_TT_inverted.pdb hep14_TT_inverted h14TT
+#make_and_em hep14_TT_inverted.pdb hep14_TT_inverted h14TT
 
 
 

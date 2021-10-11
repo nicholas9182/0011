@@ -140,7 +140,7 @@
  HT5	HRR	+0.257	37
  
 ; Terminal
- HTe	HT	+0.204	4
+ HTe	HT	+0.259	4
 
 
 [ bonds ]
@@ -368,8 +368,8 @@ CD3	HD
 
 ; Left sidechain 
  C0	CL!	+0.214	15
- H01	HL	-0.040	15
- H02	HL	-0.040	15
+ H01	HL	-0.041	15
+ H02	HL	-0.041	15
  C1	CL	+0.077	16
  H11	HL	-0.021	16
  H12	HL	-0.021	16
@@ -417,8 +417,8 @@ CD3	HD
 
 ; Right sidechain 
  Caa	CL!	+0.032	29
- Ha1	HL	+0.033	29
- Ha2	HL	+0.033	29
+ Ha1	HL	+0.032	29
+ Ha2	HL	+0.032	29
  Cb	CL	+0.109	30
  Hb1	HL	-0.013	30
  Hb2	HL	-0.013	30

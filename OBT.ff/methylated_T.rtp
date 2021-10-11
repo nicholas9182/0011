@@ -120,7 +120,7 @@
  HT3	HR	+0.143	35
  
 ; Terminal
- HTe	HT	+0.218	4
+ HTe	HT	+0.182	4
 
 
 [ bonds ]
@@ -345,10 +345,10 @@ CD3	HD
  Hv2	HG	+0.089	40
  Cp	CG      +0.005	41
  Hp1	HG      +0.088	41
- Hp2	HG      +0.088	41
+ Hp2	HG      +0.089	41
  Oq	OG      -0.390	42
  Cs	CG      +0.012	43
- Hs1	HG      +0.088	43
+ Hs1	HG      +0.089	43
  Hs2	HG      +0.088	43
  Hs3	HG      +0.088	43
  
@@ -383,10 +383,10 @@ CD3	HD
  Hk2	HG	+0.089	40
  Cl	CG      +0.005	41
  Hl1	HG      +0.088	41
- Hl2	HG      +0.088	41
+ Hl2	HG      +0.089	41
  Om	OG      -0.390	42
  Cn	CG      +0.012	43
- Hn1	HG      +0.088	43
+ Hn1	HG      +0.089	43
  Hn2	HG      +0.088	43
  Hn3	HG      +0.088	43
 

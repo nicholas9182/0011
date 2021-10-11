@@ -128,7 +128,7 @@
  HT3	HR	+0.143	35
  
 ; Terminal
- HTe	HT	+0.186	4
+ HTe	HT	+0.176	4
 
 
 [ bonds ]
@@ -368,7 +368,7 @@ CD3	HD
  Cu	CG	+0.012	25
  Hu1	HG	+0.097	25
  Hu2	HG	+0.097	26
- Hu3	HG	+0.097	26
+ Hu3	HG	+0.098	26
 
  
 
@@ -410,7 +410,7 @@ CD3	HD
  Co	CG	+0.012	36
  Ho1	HG	+0.097	37
  Ho2	HG	+0.097	37
- Ho3	HG	+0.097	38
+ Ho3	HG	+0.098	38
 
 
 
