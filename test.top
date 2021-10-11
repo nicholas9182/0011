@@ -1,0 +1,8 @@
+#include "OBT.ff/forcefield.itp"
+#include "hep14_TT_inverted.itp"
+
+[ system ]
+test
+
+[ molecules ]
+h14TT           1
