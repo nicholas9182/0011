@@ -1,6 +1,6 @@
 [ moleculetype ]
 ; Name            nrexcl
-h20i               3
+h20               3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB

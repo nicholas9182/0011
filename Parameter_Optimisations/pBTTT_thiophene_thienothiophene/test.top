@@ -1,0 +1,9 @@
+#include "OBT.ff/forcefield.itp"
+#include "mon.itp"
+
+[ system ]
+test
+
+[ molecules ]
+; Compound        #mols
+mon 		1

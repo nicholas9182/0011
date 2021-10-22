@@ -123,16 +123,16 @@
  Hn3	HL	+0.020	42
 
 ; bithiophene backbone spacer
- CT1	CRR	-0.014	33
- CT2	CRR	-0.241	34
- CT3 	CRR	+0.076	35
- CT4	CRR	+0.076	36
- CT5	CRR	-0.230	37
- CT6	CRR	-0.025	38
- ST1	SRR	-0.108	40
- ST2	SRR	-0.108	41
- HT2	HRR	+0.257	34
- HT5	HRR	+0.257	37
+ CT1	CBT	-0.014	33
+ CT2	CBT	-0.241	34
+ CT3 	CBT	+0.076	35
+ CT4	CBT	+0.076	36
+ CT5	CBT	-0.230	37
+ CT6	CBT	-0.025	38
+ ST1	SBT	-0.108	40
+ ST2	SBT	-0.108	41
+ HT2	HBT	+0.257	34
+ HT5	HBT	+0.257	37
  
 
 [ bonds ]
@@ -142,7 +142,7 @@ CS2	CS3
 CS3	CS4
 CS4	SS
 SS	CS1
-CS3	HS
+CS2	HS
 
 ; Right Thiophene
 CD1	CD2
@@ -150,7 +150,7 @@ CD2	CD3
 CD3	CD4
 CD4	SD
 SD	CD1
-CD3	HD
+CD2	HD
 
 ; Bonds to sidechains
  CS3	C0
@@ -265,6 +265,10 @@ CD3	HD
 
 ; between monomers
   CT6	+CS4	
+
+[ exclusions ]
+ Caa	ST1
+ ST2	+C0
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	
@@ -438,16 +442,16 @@ CD3	HD
  Hn3	HL	+0.020	42
 
 ; bithiophene backbone spacer
- CT1	CRR	-0.014	33
- CT2	CRR	-0.241	34
- CT3 	CRR	+0.076	35
- CT4	CRR	+0.076	36
- CT5	CRR	-0.230	37
- CT6	CRR	-0.025	38
- ST1	SRR	-0.108	40
- ST2	SRR	-0.108	41
- HT2	HRR	+0.257	34
- HT5	HRR	+0.257	37
+ CT1	CBT	-0.014	33
+ CT2	CBT	-0.241	34
+ CT3 	CBT	+0.076	35
+ CT4	CBT	+0.076	36
+ CT5	CBT	-0.230	37
+ CT6	CBT	-0.025	38
+ ST1	SBT	-0.108	40
+ ST2	SBT	-0.108	41
+ HT2	HBT	+0.257	34
+ HT5	HBT	+0.257	37
 
 
 
@@ -462,7 +466,7 @@ CS2	CS3
 CS3	CS4
 CS4	SS
 SS	CS1
-CS3	HS
+CS2	HS
 
 ; Right Thiophene
 CD1	CD2
@@ -470,7 +474,7 @@ CD2	CD3
 CD3	CD4
 CD4	SD
 SD	CD1
-CD3	HD
+CD2	HD
 
 ; Bonds to sidechains
  CS3	C0
@@ -587,6 +591,11 @@ CD3	HD
 
 ; between monomers
   CT6	+CS4
+
+
+[ exclusions ]
+ Caa	ST1
+ ST2	+C0
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	
@@ -760,16 +769,16 @@ CD3	HD
  Hn3	HL	+0.020	42
 
 ; bithiophene backbone spacer
- CT1	CRR	-0.014	33
- CT2	CRR	-0.241	34
- CT3 	CRR	+0.076	35
- CT4	CRR	+0.076	36
- CT5	CRR	-0.230	37
- CT6	CRR	-0.025	38
- ST1	SRR	-0.108	40
- ST2	SRR	-0.108	41
- HT2	HRR	+0.257	34
- HT5	HRR	+0.257	37
+ CT1	CBT	-0.014	33
+ CT2	CBT	-0.241	34
+ CT3 	CBT	+0.076	35
+ CT4	CBT	+0.076	36
+ CT5	CBT	-0.230	37
+ CT6	CBT	-0.025	38
+ ST1	SBT	-0.108	40
+ ST2	SBT	-0.108	41
+ HT2	HBT	+0.257	34
+ HT5	HBT	+0.257	37
 
 
 
@@ -784,7 +793,7 @@ CS2	CS3
 CS3	CS4
 CS4	SS
 SS	CS1
-CS3	HS
+CS2	HS
 
 ; Right Thiophene
 CD1	CD2
@@ -792,7 +801,7 @@ CD2	CD3
 CD3	CD4
 CD4	SD
 SD	CD1
-CD3	HD
+CD2	HD
 
 ; Bonds to sidechains
  CS3	C0
@@ -909,6 +918,10 @@ CD3	HD
 
 ; between monomers
   CT6	+CS4
+
+
+[ exclusions ]
+ Caa	ST1
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	

@@ -30,5 +30,5 @@ Data %>% dplyr::filter(Energy < 2000) %>%
 #		geom_smooth(aes(y=Energy), size=0.8, se=FALSE, span=0.15) + 
 		theme_classic(base_size=25) +
 		scale_x_continuous(breaks=seq(-160,160,40)) +
-		labs(x=expression('CBB-CE-CR-SR ('*degree*')'), y="E (meV)")
+		labs(x=expression('SR-CR-CV-SV ('*degree*')'), y="E (meV)")
 	ggsave("Energy_MD.pdf", width=12) 

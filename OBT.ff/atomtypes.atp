@@ -39,6 +39,9 @@
  NTA	14.00670	; Nitrogen in TBA
  CTA	12.01100	; Carbon in TBA
  HTA	1.00800		; Hydrogen in TBA
+ CBT	12.01100	; Carbon in pBTTT thienothiophene
+ SBT	 32.06000	; Sulfur in pBTTT thienothiophene
+ HBT	  1.00800 	; Hydrogen in pBTTT thienothiophene
 
  ; For perclorate 
  PCC	35.45300	; Chlorate ion in perchlorate

@@ -27,42 +27,25 @@ make_and_em() {
 	gmx mdrun -s test.tpr -deffnm temp &> /dev/null && echo "made did EM run" || return 1
 	gmx editconf -f temp.gro -o pdb_files/$1  &> /dev/null && echo "put back in pdb" || return 1
 	mv $2.itp itp_files/  &> /dev/null  && echo "put back in itp" || return 1
+	rm test* posre* conf.gro mdout* temp* topol.top
 
 }
 
-#make_and_em gly14_T.pdb gly14_T g14T
-#make_and_em met14_T.pdb met14_T m14T
-#make_and_em eth14_T.pdb eth14_T e14T
-#make_and_em pro14_T.pdb pro14_T p14T
-#make_and_em but14_T.pdb but14_T b14T
-#make_and_em pen14_T.pdb pen14_T p14T
-#make_and_em hex14_T.pdb hex14_T h14T
+make_and_em gly12_TT.pdb gly12_TT g12TT
+#make_and_em met12_TT.pdb met12_TT m12TT
+#make_and_em eth12_TT.pdb eth12_TT e12TT
+#make_and_em pro12_TT.pdb pro12_TT p12TT
+#make_and_em but12_TT.pdb but12_TT b12TT
+#make_and_em pen12_TT.pdb pen12_TT p12TT
+#make_and_em hex12_TT.pdb hex12_TT h12TT
 #
-#make_and_em gly14_TT.pdb gly14_TT g14TT
-#make_and_em met14_TT.pdb met14_TT m14TT
-#make_and_em eth14_TT.pdb eth14_TT e14TT
-#make_and_em pro14_TT.pdb pro14_TT p14TT
-#make_and_em but14_TT.pdb but14_TT b14TT
-#make_and_em pen14_TT.pdb pen14_TT p14TT
-make_and_em hex14_TT.pdb hex14_TT h14TT
-
-#make_and_em gly14_T_inverted.pdb gly14_T_inverted g14T
-#make_and_em met14_T_inverted.pdb met14_T_inverted m14T
-#make_and_em eth14_T_inverted.pdb eth14_T_inverted e14T
-#make_and_em pro14_T_inverted.pdb pro14_T_inverted p14T
-#make_and_em but14_T_inverted.pdb but14_T_inverted b14T
-#make_and_em pen14_T_inverted.pdb pen14_T_inverted p14T
-#make_and_em hex14_T_inverted.pdb hex14_T_inverted h14T
-#make_and_em hep14_T_inverted.pdb hep14_T_inverted h14T
-
-#make_and_em gly14_TT_inverted.pdb gly14_TT_inverted g14TT
-#make_and_em met14_TT_inverted.pdb met14_TT_inverted m14TT
-#make_and_em eth14_TT_inverted.pdb eth14_TT_inverted e14TT
-#make_and_em pro14_TT_inverted.pdb pro14_TT_inverted p14TT
-#make_and_em but14_TT_inverted.pdb but14_TT_inverted b14TT
-#make_and_em pen14_TT_inverted.pdb pen14_TT_inverted p14TT
-#make_and_em hex14_TT_inverted.pdb hex14_TT_inverted h14TT
-#make_and_em hep14_TT_inverted.pdb hep14_TT_inverted h14TT
+#make_and_em met12_TT_inverted.pdb met12_TT_inverted m12TT
+#make_and_em eth12_TT_inverted.pdb eth12_TT_inverted e12TT
+#make_and_em pro12_TT_inverted.pdb pro12_TT_inverted p12TT
+#make_and_em but12_TT_inverted.pdb but12_TT_inverted b12TT
+#make_and_em pen12_TT_inverted.pdb pen12_TT_inverted p12TT
+#make_and_em hex12_TT_inverted.pdb hex12_TT_inverted h12TT
+#make_and_em hep12_TT_inverted.pdb hep12_TT_inverted h12TT
 
 
 

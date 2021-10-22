@@ -69,6 +69,11 @@
 ; Gold
  Au     196.96657       0.000   A       0.356   0.267   ; K. S. S. Liu,† C. W. Yong, J. Phys. Chem. B 1999, 103, 3195-3205
 
+; pBTTT thienothiophene spacer 
+ CBT    12.01100        0.000   A       0.355   0.293   ; opls_145 , CA
+ SBT    32.06000        0.000   A       0.355   1.046   ; opls_633 , S
+ HBT	1.00800		0.000	A	0.125	0.250	; 
+
 [ bondtypes ]
 ;  i    j func        b0          kb
 ; thiophene
@@ -167,6 +172,12 @@
  NTA	CTA	1	0.14710	153552.0	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020
  CTA	HTA	1	0.10900	142256.0	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020
  CTA	CTA	1	0.15290	112131.0	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020
+
+; pBTTT
+ CR	CBT	1	0.15800 392459.2	; Same as pgT2
+ CBT	CBT	1	0.14000	392459.2	; Same as pgT2
+ CBT	SBT	1	0.17600	209200.0	; same as pgT2
+ CBT	HBT	1	0.10800	307105.6	; same as pgT2
 
 [ angletypes ]
 ;  i    j    k  func    theta0      ktheta
@@ -367,6 +378,16 @@
  HTA	CTA	NTA	1	109.5	146.440	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020			
  CTA	NTA	CTA	1	113.0	209.200	; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020			
 
+; pBTTT Thienothiophene 
+ CBT 	CBT	CBT	1	112.50  502.08  ; Same as CRR parameters
+ CBT	SBT	CBT	1	 91.00  502.08  ; Same as CRR parameters
+ HBT	CBT	CBT	1	124.00  292.88  ; Same as CRR parameters
+ SBT    CBT     CBT     1       119.00  502.08  ; Same as CRR parameters
+ CR 	CR	CBT	1	112.50  502.08  ; Same as CRR parameters
+ CR 	CBT	CBT	1	112.50  502.08  ; Same as CRR parameters
+ CBT    CR      SR      1       112.00  502.08  ; Same as CRR parameters
+ CR     CBT     SBT     1       112.00  502.08  ; Same as CRR parameters
+
 [ dihedraltypes ]
 ; Improper dihedrals
 ; thiophene
@@ -478,6 +499,18 @@
  CA	CV	HV	CV	2	0	391.47000	;   Taken from drews params for PFO	
  CR	CV	HR	CV 	2	0	391.47000	;   Taken from drews params for PFO
  CV	HV	CV	CR 	2	0	391.47000	;   Taken from drews params for PFO
+
+; pBTTT Thienothiophene
+ CBT    SBT     CBT     CBT     2       0       391.47000       ; same as CRR parameters
+ CBT    CBT     CBT     CBT     2       0       391.47000       ; same as CRR parameters   
+ CBT    CBT     CBT     HBT     2       0       391.47000       ; same as CRR parameters   
+ CBT    CBT     CBT     SBT     2       0       782.94000       ; same as CRR parameters  
+ CBT    SBT     CBT     CR      2       0       391.47000       ; same as CRR parameters   
+ CBT    ST      CBT     CR      2       0       391.47000       ; same as CRR parameters   
+ CBT    SBT     CBT     HBT     2       0       391.47000       ; same as CRR parameters   
+ SBT    CBT     CBT     SBT     2       0       391.47000       ; same as CRR parameters   
+ CR     CR      SR      CBT     2       0       391.47000       ; same as CRR parameters   
+ CR	SBT	CBT	CBT	2	0	391.47000 	; same as CRR parameters 
 
 ; Ryckaert-Bellemans Dihedrals
 ; X    j    k    X func      C0       C1       C2       C3       C4       C5
@@ -594,6 +627,7 @@
 ; Vinyl
  CR	CV	CV	CR	3	58.57600	0.00000		-58.57600	0.00000		0.00000		0.00000 ; opls X - CM - CM - X
 
+; Fourier Parameters
 ; TBA
  HTA	CTA	CTA	HTA	5	0.0000		0.0000		1.2552		0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020		
  HTA	CTA	CTA	CTA	5	0.0000		0.0000		1.2552		0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020			
@@ -603,8 +637,9 @@
  CTA	NTA	CTA	CTA	5	6.0161		-0.5179		1.1041		0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020	
  HTA	CTA	CTA	NTA	5	0.0000		0.0000		1.6066	        0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020		
  HTA	CTA	NTA	CTA	5	0.0000		0.0000		1.2623		0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020		
-                                                                                                                                  
-                                                                                                                                  
+
+; pBTTT thienothiophene
+ SBT	CBT	CR	CR	3	2.3100		3.063365 	-12.259190 	-1.494677 	5.160333 	-1.547169   ; QCC optimised                                                                                                                                                                                                                                                                 
 
 
 

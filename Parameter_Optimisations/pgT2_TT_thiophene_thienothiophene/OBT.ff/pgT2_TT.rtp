@@ -1,0 +1,110 @@
+[ bondedtypes ]
+; Col 1: Type of bond
+; Col 2: Type of angles
+; Col 3: Type of proper dihedrals
+; Col 4: Type of improper dihedrals
+; Col 5: Generate all dihedrals if 1, only heavy atoms if 0.
+; Col 6: Number of excluded neighbors for nonbonded interactions
+; Col 7: Generate 1,4 interactions between pairs of hydrogens if 1
+; Col 8: Remove propers over the same bond as an improper if it is 1
+; bonds  angles  dihedrals  impropers all_dihedrals nrexcl HH14 RemoveDih
+     1       1          3          2        0         3      0     1
+
+
+
+
+
+[ T2 ]
+; Middle unit, without any terminal atoms
+
+[ atoms ]
+; Left thiophene unit (Sinister)
+; Right thiophene unit (Dextrose) 
+ CD1	CR	+0.055	7
+ CD2	CR	-0.220	8
+ CD3	CR	-0.217	9
+ CD4	CR	+0.034	10
+ SD	SR	+0.082	11
+ HD	HR	+0.136	9
+                
+; Right sidechain 
+ OD	OT	-0.284	29
+
+; bithiophene backbone spacer
+ CT1	CRR	-0.011	33
+ CT2	CRR	-0.238	34
+ CT3 	CRR	+0.079	35
+ CT4	CRR	+0.079	36
+ CT5	CRR	-0.227	37
+ CT6	CRR	-0.022	38
+ ST1	SRR	-0.105	40
+ ST2	SRR	-0.105	41
+ HT2	HRR	+0.260	34
+ HT5	HRR	+0.260	37
+
+
+[ bonds ]
+; Right Thiophene
+CD1	CD2
+CD2	CD3
+CD3	CD4
+CD4	SD
+SD	CD1
+CD3	HD
+CD4	CT1
+
+; Bonds to sidechains
+ CD2	OD
+ 
+
+; bithiophene backbone spacer
+ CT1	CT2
+ CT2	CT3
+ CT3	CT4
+ CT4	CT5
+ CT5	CT6
+ CT1	ST1
+ ST1	CT4
+ CT3	ST2
+ ST2	CT6
+ CT2	HT2
+ CT5	HT5
+
+ 
+[ dihedrals ]
+ CD3	CD4	CT1	ST1
+
+[ Impropers ]
+; Right thiophene
+ CD1	SD	CD4	CD3
+ CD2	CD1	SD	CD4
+ CD3	CD2	CD1	SD
+ CD4	CD3	CD2	CD1
+ SD	CD4	CD3	CD2
+
+ CD3	CD2	CD4	HD
+ CD3	CD2	CD4	OD
+
+
+; Bithiophene backbone spacer
+ CD4    CD3     SD      CT1
+ CT1	CT2	ST1	CD4
+
+ CT3    CT4     ST1     CT1
+ CT4    ST1     CT1     CT2
+ ST1    CT1     CT2     CT3
+ CT1    CT2     CT3     CT4
+ CT2    CT3     CT4     ST1
+
+ CT3    ST2     CT6     CT5
+ ST2    CT6     CT5     CT4
+ CT6    CT5     CT4     CT3
+ CT5    CT4     CT3     ST2
+ CT4    CT3     ST2     CT6
+
+ CT3    CT4     CT2     ST2
+ CT4    ST1     CT3     CT5
+
+ CT2    CT3     CT1     HT2
+ CT5    CT4     CT6     HT5
+
