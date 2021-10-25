@@ -268,7 +268,11 @@ CD2	HD
 
 [ exclusions ]
  Caa	ST1
+ Ha1	ST1
+ Ha2	ST1
  ST2	+C0
+ ST2	+H01
+ ST2	+H02
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	
@@ -592,10 +596,13 @@ CD2	HD
 ; between monomers
   CT6	+CS4
 
-
 [ exclusions ]
  Caa	ST1
+ Ha1	ST1
+ Ha2	ST1
  ST2	+C0
+ ST2	+H01
+ ST2	+H02
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	
@@ -919,9 +926,10 @@ CD2	HD
 ; between monomers
   CT6	+CS4
 
-
 [ exclusions ]
  Caa	ST1
+ Ha1	ST1
+ Ha2	ST1
 
 [ dihedrals ]
  CS2	CS1	CD1	SD	

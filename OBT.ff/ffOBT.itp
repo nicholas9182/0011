@@ -67,7 +67,7 @@
 
 ; Substrate Calculations
 ; Gold
- Au     196.96657       0.000   A       0.356   0.267   ; K. S. S. Liu,† C. W. Yong, J. Phys. Chem. B 1999, 103, 3195-3205
+ Au     196.96657       0.000   A       0.262   22.13   ; Su, Liangliang phys chem letters 9.15 (2018): 4396-4400.
 
 ; pBTTT thienothiophene spacer 
  CBT    12.01100        0.000   A       0.355   0.293   ; opls_145 , CA
@@ -175,6 +175,7 @@
 
 ; pBTTT
  CR	CBT	1	0.15800 392459.2	; Same as pgT2
+ CAA	CBT	1	0.15800 392459.2	; Same as pgT2
  CBT	CBT	1	0.14000	392459.2	; Same as pgT2
  CBT	SBT	1	0.17600	209200.0	; same as pgT2
  CBT	HBT	1	0.10800	307105.6	; same as pgT2
@@ -384,9 +385,13 @@
  HBT	CBT	CBT	1	124.00  292.88  ; Same as CRR parameters
  SBT    CBT     CBT     1       119.00  502.08  ; Same as CRR parameters
  CR 	CR	CBT	1	112.50  502.08  ; Same as CRR parameters
+ CBB 	CAA	CBT	1	112.50  502.08  ; Same as CRR parameters
  CR 	CBT	CBT	1	112.50  502.08  ; Same as CRR parameters
+ CAA 	CBT	CBT	1	112.50  502.08  ; Same as CRR parameters
  CBT    CR      SR      1       112.00  502.08  ; Same as CRR parameters
+ CBT    CAA     ST      1       112.00  502.08  ; Same as CRR parameters
  CR     CBT     SBT     1       112.00  502.08  ; Same as CRR parameters
+ CAA    CBT     SBT     1       112.00  502.08  ; Same as CRR parameters
 
 [ dihedraltypes ]
 ; Improper dihedrals
@@ -510,7 +515,9 @@
  CBT    SBT     CBT     HBT     2       0       391.47000       ; same as CRR parameters   
  SBT    CBT     CBT     SBT     2       0       391.47000       ; same as CRR parameters   
  CR     CR      SR      CBT     2       0       391.47000       ; same as CRR parameters   
+ CAA    CBB     ST      CBT     2       0       391.47000       ; same as CRR parameters   
  CR	SBT	CBT	CBT	2	0	391.47000 	; same as CRR parameters 
+ CAA	SBT	CBT	CBT	2	0	391.47000 	; same as CRR parameters 
 
 ; Ryckaert-Bellemans Dihedrals
 ; X    j    k    X func      C0       C1       C2       C3       C4       C5
@@ -639,8 +646,5 @@
  HTA	CTA	NTA	CTA	5	0.0000		0.0000		1.2623		0.00000		; Shivanand Kumar Veesam, J. Phys. Chem. B. 2020		
 
 ; pBTTT thienothiophene
- SBT	CBT	CR	CR	3	2.3100		3.063365 	-12.259190 	-1.494677 	5.160333 	-1.547169   ; QCC optimised                                                                                                                                                                                                                                                                 
-
-
-
-
+ SBT	CBT	CR	CR	3	2.3100		3.063365 	-12.259190 	-1.49467 	5.160333 	-1.5471   ; QCC optimised
+ SBT	CBT	CAA	CBB	3	2.7074		9.137513	-10.982018	-1.21673	-0.91584	-1.5808   ; QCC optimised

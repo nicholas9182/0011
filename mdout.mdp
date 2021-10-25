@@ -2,7 +2,7 @@
 ;	File 'mdout.mdp' was generated
 ;	By user: nicholassiemons (501)
 ;	On host: Nicholass-MacBook-Pro.local
-;	At date: Mon Oct 11 15:23:57 2021
+;	At date: Mon Oct 25 08:52:15 2021
 ;
 ;	Created by:
 ;	                     :-) GROMACS - gmx grompp, 2018.8 (-:
@@ -11,7 +11,7 @@
 ;	Data prefix:  /usr/local/gromacs
 ;	Working dir:  /Users/nicholassiemons/Dropbox/OBT/0011
 ;	Command line:
-;	  gmx grompp -f EM.mdp -p test.top -c temp.gro -o test.tpr
+;	  gmx grompp -f EM.mdp -p trial.top -c pdb_files/gpBTTT_20mer.pdb -o EM.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
