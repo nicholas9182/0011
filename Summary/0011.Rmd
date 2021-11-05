@@ -46,34 +46,40 @@ RB_fit <- function(D) {
 
 ```
 
-```{r NDI Dihedrals, fig.width=4, fig.height=2}
+```{r NDI Dihedrals, fig.width=16, fig.height=8}
  
-a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral/QCC_files/NDI_Dihedral_scan_b3lyp_methyl_hd/NDI.txt") %>% mutate(State="Uncharged") %>% print()
-b <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_polaron/QCC_files/NDI.txt") %>% mutate(State="Polaron") %>% print()
-c <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_bipolaron/QCC_files/NDI.txt") %>% mutate(State="Bipolaron") %>% print()
+a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral/QCC_files/NDI_Dihedral_scan_b3lyp_methyl_hd/NDI.txt") %>% mutate(State="Uncharged",Method="b3lyp/6-311+g(d,p)") 
+b <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_polaron/QCC_B3LYP/NDI.txt") %>% mutate(State="Polaron",Method="b3lyp/6-311+g(d,p)") 
+c <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_bipolaron/QCC_B3LYP/NDI.txt") %>% mutate(State="Bipolaron",Method="b3lyp/6-311+g(d,p)") 
 
-rbind(a,b,c) %>% 
+d <- read.table("/Users/nicholassiemons/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral/QCC_B3LYP_PCM/NDI.txt") %>% mutate(State="Uncharged",Method="b3lyp/6-311+g(d,p) with pcm")
+e <- read.table("/Users/nicholassiemons/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_polaron/QCC_B3LYP_PCM/NDI.txt") %>% mutate(State="Polaron",Method="b3lyp/6-311+g(d,p) with pcm")
+f <- read.table("/Users/nicholassiemons/Dropbox/OBT/0011/Parameter_Optimisations/NDI_Dihedral_bipolaron/QCC_B3LYP_PCM/NDI.txt") %>% mutate(State="Bipolaron",Method="b3lyp/6-311+g(d,p) with pcm")
+
+
+rbind(a,b,c,d,e,f) %>% 
   rename(Angle = V1, Energy = V2) %>% 
-  group_by(State) %>%
+  group_by(State, Method) %>%
   mutate(Energy = (Energy - min(Energy))*27211.3825435 ) %>% 
   ungroup() %>% 
   mutate(ang_group = abs(Angle)) %>% 
-  group_by(State, ang_group) %>%
+  group_by(State, ang_group, Method) %>%
   mutate(Energy = min(Energy)) %>% 
   ggplot(aes(x = Angle,  y = Energy, color = State)) +
     geom_point(size=2) +
     geom_smooth(se=FALSE,span=0.1,size=1.5) +
     labs(x = expression(phi~"[ "^o~"]"), y = "Energy [meV]") +
+    facet_grid(cols = vars(Method)) +
     scale_color_manual(values = c("red","orange","yellow")) 
-ggsave("Figures/NDI_charged_dihedrals.pdf", width=12, height=7)
+ggsave("Figures/NDI_charged_dihedrals.pdf", width=16, height=7)
 
-rbind(a,b,c) %>% 
+ rbind(a,b,c,d,e,f) %>% 
   rename(Angle = V1, Energy = V2) %>% 
-  group_by(State) %>%
+  group_by(State, Method) %>%
   mutate(Energy = (Energy - min(Energy))*27211.3825435 ) %>% 
   ungroup() %>% 
   mutate(ang_group = abs(Angle)) %>% 
-  group_by(State, ang_group) %>%
+  group_by(State, ang_group, Method) %>%
   mutate(Energy = min(Energy)) %>% 
   ungroup() %>% 
   select(-c(ang_group)) %>% 
@@ -83,52 +89,103 @@ rbind(a,b,c) %>%
   ggplot(aes(x = Angle,  y = Pop, color = State)) +
     geom_point(size=2) +
     geom_smooth(se=FALSE,span=0.1,size=1.5) +
+    facet_grid(cols = vars(Method)) +
     labs(x = expression(phi~"[ "^o~"]"), y = "Relative Populations") +
     scale_color_manual(values = c("red","orange","yellow")) 
 ggsave("Figures/NDI_charged_dihedrals_pop.pdf", width=12, height=7)
 
 ```    
 
-```{r pBTTT Dihedral QCC scans, fig.width=10}
- 
-a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_files/pBTTT.txt") %>% mutate(Oligomer="pBTTT") %>% print()
-b <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_files/pBTTT.txt") %>% mutate(Oligomer="gpBTTT") %>% print()
-c <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_files/pg2T_TT.txt") %>% mutate(Oligomer="pgT2_TT") %>% print()
+```{r pBTTT Dihedral QCC scans, fig.width=14}
 
-rbind(a,b,c) %>% 
+RB <- function(C0,C1,C2,C3,C4,C5,Angle){
+        V <-    C0*cos(Angle*0.0174533)^0 +
+                -C1*cos(Angle*0.0174533)^1 +
+                C2*cos(Angle*0.0174533)^2 +
+                -C3*cos(Angle*0.0174533)^3 +
+                C4*cos(Angle*0.0174533)^4 +
+                -C5*cos(Angle*0.0174533)^5
+        return(V)
+}
+
+RB_tibble <- function(coefs,Angle){
+  
+      C0 <- as.numeric(coefs[1])
+      C1 <- as.numeric(coefs[2])
+      C2 <- as.numeric(coefs[3])
+      C3 <- as.numeric(coefs[4])
+      C4 <- as.numeric(coefs[5])
+      C5 <- as.numeric(coefs[6])
+  
+        V <-    C0*cos(Angle*0.0174533)^0 +
+                -C1*cos(Angle*0.0174533)^1 +
+                C2*cos(Angle*0.0174533)^2 +
+                -C3*cos(Angle*0.0174533)^3 +
+                C4*cos(Angle*0.0174533)^4 +
+                -C5*cos(Angle*0.0174533)^5
+        
+        rett <- as.tibble(data.frame(Angle_pred=Angle, Energy_pred=V))
+        return(rett)
+}
+
+a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_B3LYP/pBTTT.txt") %>% mutate(Oligomer="pBTTT",Method="B3lyp/6-311+g(d,p)")
+e <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_wb97xd/pBTTT.txt") %>% mutate(Oligomer="pBTTT",Method="wb97xd/6-311+g(d,p)")
+f <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_HF/pBTTT.txt") %>% mutate(Oligomer="pBTTT",Method="HF/aug-cc-pvdz")
+h <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_MP2/pBTTT.txt") %>% mutate(Oligomer="pBTTT",Method="MP2/aug-cc-pvdz")
+b <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_B3LYP/pBTTT.txt") %>% mutate(Oligomer="gpBTTT",Method="B3lyp/6-311+g(d,p)")
+c <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_wb97xd/pBTTT.txt") %>% mutate(Oligomer="gpBTTT",Method="wb97xd/6-311+g(d,p)")
+g <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_HF/pBTTT.txt") %>% mutate(Oligomer="gpBTTT",Method="HF/aug-cc-pvdz")
+i <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_MP2/pBTTT.txt") %>% mutate(Oligomer="gpBTTT",Method="MP2/aug-cc-pvdz")
+d <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_B3LYP/pg2T_TT.txt") %>% mutate(Oligomer="pgT2_TT",Method="B3lyp/6-311+g(d,p)")
+j <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_WB97XD/pg2T_TT.txt") %>% mutate(Oligomer="pgT2_TT",Method="wb97xd/6-311+g(d,p)")
+k <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_HF/pg2T_TT.txt") %>% mutate(Oligomer="pgT2_TT",Method="HF/aug-cc-pvdz")
+l <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_MP2/pg2T_TT.txt") %>% mutate(Oligomer="pgT2_TT",Method="MP2/aug-cc-pvdz")
+
+m <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_CCSD/pBTTT.txt") %>% mutate(Oligomer="pBTTT") %>% 
+  rename( CCSD_SCF = V3 , CCSD = V5 , CCSDT = V7 ) %>%
+  select(V1, CCSD_SCF, CCSD, CCSDT, Oligomer) %>% 
+  pivot_longer(names_to = "Method", values_to = "V2", cols = c(CCSD_SCF,CCSD,CCSDT)) %>% 
+  drop_na() %>% print()
+
+n <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_CCSD/gpBTTT.txt") %>% mutate(Oligomer="gpBTTT") %>% 
+  rename( CCSD_SCF = V3 , CCSD = V5 , CCSDT = V7 ) %>%
+  select(V1, CCSD_SCF, CCSD, CCSDT, Oligomer) %>% 
+  pivot_longer(names_to = "Method", values_to = "V2", cols = c(CCSD_SCF,CCSD,CCSDT)) %>% 
+  drop_na() %>% print()
+
+o <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_CCSD/pgT2_TT.txt") %>% mutate(Oligomer="pgT2_TT") %>% 
+  rename( CCSD_SCF = V3 , CCSD = V5 , CCSDT = V7 ) %>%
+  select(V1, CCSD_SCF, CCSD, CCSDT, Oligomer) %>% 
+  pivot_longer(names_to = "Method", values_to = "V2", cols = c(CCSD_SCF,CCSD,CCSDT)) %>% 
+  drop_na() %>% print()
+
+rbind(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o) %>% 
   rename(Angle = V1, Energy = V2) %>% 
-  group_by(Oligomer) %>%
+  group_by(Oligomer, Method) %>%
   mutate(Energy = (Energy - min(Energy))*27211.3825435 ) %>% 
   ungroup() %>% 
-  mutate(ang_group = abs(Angle)) %>% 
-  group_by(Oligomer, ang_group) %>%
+  mutate( ang_group = abs(Angle) ) %>% 
+  group_by(Oligomer, ang_group, Method) %>%
   mutate(Energy = min(Energy)) %>% 
-  ggplot(aes(x = Angle,  y = Energy, color = Oligomer)) +
-    geom_point(size=2) +
-    geom_smooth(se=FALSE,span=0.1,size=1.5) +
-    scale_color_manual(values = c("darkgreen","darkblue","violet")) + 
-    labs(x = expression(phi~"[ "^o~"]"), y = "Energy [meV]") 
-ggsave("Figures/pBTTT_dihedrals.pdf", width=12, height=7)
-
-rbind(a,b,c) %>% 
-  rename(Angle = V1, Energy = V2) %>% 
-  group_by(Oligomer) %>%
-  mutate(Energy = (Energy - min(Energy))*27211.3825435 ) %>% 
-  ungroup() %>% 
-  mutate(ang_group = abs(Angle)) %>% 
-  group_by(Oligomer, ang_group) %>%
-  mutate(Energy = min(Energy)) %>% 
-  ungroup() %>% 
-  select(-c(ang_group)) %>% 
-  nest(data = c(Energy, Angle)) %>% 
-  mutate( Pop = map(data, ~ boltz_invert(x = .$Angle , y = .$Energy  ) ) ) %>% 
-  unnest(Pop, data) %>% 
-  ggplot(aes(x = Angle,  y = Pop, color = Oligomer)) +
-    geom_point(size=2) +
-    geom_smooth(se=FALSE,span=0.1,size=1.5) +
-    scale_color_manual(values = c("darkgreen","darkblue","violet")) + 
-    labs(x = expression(phi~"[ "^o~"]"), y = "Relative Populations") 
-ggsave("Figures/pBTTT_dihedrals_pop.pdf", width=12, height=7)
+  ungroup() %>% select(-c(ang_group)) %>% 
+  nest(data = c(Angle,Energy)) %>% 
+  mutate( 
+    fit = map( data , ~ nls( .x$Energy ~ RB(C0,C1,C2,C3,C4,C5,Angle),
+              start=list(C0=0,C1=0,C2=0,C3=0,C4=0,C5=0),
+              data= .x) ) , 
+    coefs = map( fit , tidy ) ) %>% 
+  unnest(coefs) %>% 
+  select(-c(std.error, statistic, p.value,fit)) %>% 
+  pivot_wider(names_from = term,  values_from = estimate) %>% 
+  nest( Parameters = c(C0,C1,C2,C3,C4,C5)) %>% 
+  mutate( predict = map( Parameters , ~ RB_tibble( coefs = .x , Angle = seq(-180,180,2) ) ) ) %>% 
+  unnest(predict)  %>% unnest(data) %>% 
+  ggplot(aes(x = Angle_pred,  y = Energy_pred , colour = Method)) +
+    geom_line(size=1.5) +
+    facet_grid(Oligomer~Method) +
+    geom_point(aes(x=Angle,  y = Energy),size=2) +
+    labs(x = "Angle [degrees]", y = "E [kJ/mol]")
+ggsave("Figures/Dihedral_Potentials.pdf", width=28, height=18)
 
 ```    
 
@@ -294,7 +351,7 @@ rbind(a,b) %>%
   mutate( 
       fit = map( data , ~ nls( .x$Difference ~ RB(C0,C1,C2,C3,C4,C5,Angle),
                 start=list(C0=0,C1=0,C2=0,C3=0,C4=0,C5=0),
-                weights = boltz_invert_kjmol(x = a$V1, y = a$V2) , 
+                weights = 1/boltz_invert_kjmol(x = a$V1, y = a$V2) , 
                 data= .x) ) , 
       coefs = map( fit , tidy ) , 
       predict = map(fit , predict) ) %>% 

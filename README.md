@@ -189,6 +189,12 @@ AEn = alkylated sidechains, end unit
 
 ## pBTTT ##
 
-T1 = pBTTT first unit
-T2 = pBTTT middle unit
-T3 = pbTTT end unit
+T1 = pBTTT first unit \
+T2 = pBTTT middle unit \
+T3 = pbTTT end unit \
+T4 = gpBTTT first unit \
+T5 = gpBTTT middle unit \
+T6 = gpbTTT end unit \
+T7 = teg pgT2-TT first unit \
+T8 = teg pgT2-TT middle unit \
+T9 = teg pgT2-TT end unit \

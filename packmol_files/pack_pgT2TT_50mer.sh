@@ -28,7 +28,7 @@ structure /Users/nicholassiemons/Dropbox/OBT/0011/pdb_files/T9.pdb
 number 1 
 center 
 resnumbers 2
-fixed 720 0 0 0 0 0
+fixed 735 0 0 0 0 0
 inside box 0. 0. 0. 0 0 0 
 end structure 
 
