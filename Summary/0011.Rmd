@@ -178,7 +178,7 @@ rbind(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o) %>%
   select(-c(std.error, statistic, p.value,fit)) %>% 
   pivot_wider(names_from = term,  values_from = estimate) %>% 
   nest( Parameters = c(C0,C1,C2,C3,C4,C5)) %>% 
-  mutate( predict = map( Parameters , ~ RB_tibble( coefs = .x , Angle = seq(-180,180,2) ) ) ) %>% 
+  mutate( predict = map( Parameters , ~ RB_tibble( coefs = .x , Angle = seq(-180,180,5) ) ) ) %>% 
   unnest(predict)  %>% unnest(data) %>% 
   ggplot(aes(x = Angle_pred,  y = Energy_pred , colour = Method)) +
     geom_line(size=1.5) +
