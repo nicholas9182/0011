@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "pBTTT_50mer.itp"
+#include "trimer_glycol_alkyl.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-pBTTT 		1
+tga 		1

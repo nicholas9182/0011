@@ -1,5 +1,5 @@
-Log file opened on Fri Nov  5 14:13:45 2021
-Host: Nicholass-MacBook-Pro.local  pid: 4991  rank ID: 0  number of ranks:  1
+Log file opened on Fri Nov 12 15:24:25 2021
+Host: Nicholass-MacBook-Pro.local  pid: 6246  rank ID: 0  number of ranks:  1
                       :-) GROMACS - gmx mdrun, 2018.8 (-:
 
                             GROMACS is written by:
@@ -142,7 +142,7 @@ Input Parameters:
    comm-mode                      = Linear
    nstcomm                        = 100
    bd-fric                        = 0
-   ld-seed                        = -738866480
+   ld-seed                        = 1083102404
    emtol                          = 10
    emstep                         = 0.01
    niter                          = 20
@@ -292,7 +292,7 @@ qm-opts:
          t0                       = 0
          sigma                    = 0
 grpopts:
-   nrdf:        5237
+   nrdf:         561
    ref-t:         350
    tau-t:         0.1
 annealing:          No
@@ -303,35 +303,35 @@ annealing-npoints:           0
 
 Can not increase nstlist because verlet-buffer-tolerance is not set or used
 
-Initializing Domain Decomposition on 8 ranks
+Initializing Domain Decomposition on 2 ranks
 Dynamic load balancing: off
-Minimum cell size due to atom displacement: 0.213 nm
+Minimum cell size due to atom displacement: 0.204 nm
 Initial maximum inter charge-group distances:
-    two-body bonded interactions: 0.467 nm, LJ-14, atoms 977 983
-  multi-body bonded interactions: 0.414 nm, Ryckaert-Bell., atoms 2050 2055
-Minimum cell size due to bonded interactions: 0.456 nm
+    two-body bonded interactions: 0.587 nm, LJ-14, atoms 11 15
+  multi-body bonded interactions: 0.392 nm, Ryckaert-Bell., atoms 104 113
+Minimum cell size due to bonded interactions: 0.431 nm
 Maximum distance for 5 constraints, at 120 deg. angles, all-trans: 0.218 nm
 Estimated maximum distance required for P-LINCS: 0.218 nm
 Scaling the initial minimum size with 1/0.8 (option -dds) = 1.25
-Optimizing the DD grid for 8 cells with a minimum initial size of 0.569 nm
-The maximum allowed number of cells is: X 175 Y 175 Z 175
-Domain decomposition grid 2 x 2 x 2, separate PME ranks 0
+Optimizing the DD grid for 2 cells with a minimum initial size of 0.539 nm
+The maximum allowed number of cells is: X 55 Y 55 Z 55
+Domain decomposition grid 2 x 1 x 1, separate PME ranks 0
 Domain decomposition rank 0, coordinates 0 0 0
 
-The initial number of communication pulses is: X 1 Y 1 Z 1
-The initial domain decomposition cell size is: X 50.00 nm Y 50.00 nm Z 50.00 nm
+The initial number of communication pulses is: X 1
+The initial domain decomposition cell size is: X 15.00 nm
 
 The maximum allowed distance for charge groups involved in interactions is:
                  non-bonded interactions           1.200 nm
             two-body bonded interactions  (-rdd)   1.200 nm
           multi-body bonded interactions  (-rdd)   1.200 nm
-  atoms separated by up to 5 constraints  (-rcon) 50.000 nm
+  atoms separated by up to 5 constraints  (-rcon) 15.000 nm
 
 When dynamic load balancing gets turned on, these settings will change to:
-The maximum number of communication pulses is: X 1 Y 1 Z 1
+The maximum number of communication pulses is: X 1
 The minimum size for domain decomposition cells is 1.200 nm
 The requested allowed shrink of DD cells (option -dds) is: 0.80
-The allowed shrink of domain decomposition cells is: X 0.02 Y 0.02 Z 0.02
+The allowed shrink of domain decomposition cells is: X 0.08
 The maximum allowed distance for charge groups involved in interactions is:
                  non-bonded interactions           1.200 nm
             two-body bonded interactions  (-rdd)   1.200 nm
@@ -339,7 +339,7 @@ The maximum allowed distance for charge groups involved in interactions is:
   atoms separated by up to 5 constraints  (-rcon)  1.200 nm
 
 
-Using 8 MPI threads
+Using 2 MPI threads
 System total charge: 0.000
 Potential shift: LJ r^-12: -1.000e+00 r^-6: -1.000e+00, Coulomb -1e+00
 Generated table with 1100 data points for 1-4 COUL.
@@ -369,7 +369,7 @@ P-LINCS: A Parallel Linear Constraint Solver for molecular simulation
 J. Chem. Theory Comput. 4 (2008) pp. 116-122
 -------- -------- --- Thank You --- -------- --------
 
-The number of constraints is 1240
+The number of constraints is 126
 There are inter charge-group constraints,
 will communicate selected coordinates each lincs iteration
 
@@ -387,90 +387,87 @@ Canonical sampling through velocity rescaling
 J. Chem. Phys. 126 (2007) pp. 014101
 -------- -------- --- Thank You --- -------- --------
 
-There are: 2160 Atoms
-Atom distribution over 8 domains: av 270 stddev 26 min 231 max 316
+There are: 230 Atoms
+Atom distribution over 2 domains: av 115 stddev 0 min 115 max 115
 
 Constraining the starting coordinates (step 0)
 
 Constraining the coordinates at t0-dt (step 0)
-RMS relative constraint deviation after constraining: 1.80e-05
-Initial temperature: 352.16 K
+RMS relative constraint deviation after constraining: 5.92e-06
+Initial temperature: 351.774 K
 
-Started mdrun on rank 0 Fri Nov  5 14:13:45 2021
+Started mdrun on rank 0 Fri Nov 12 15:24:25 2021
            Step           Time
               0        0.00000
 
    Energies (kJ/mol)
            Bond          Angle Ryckaert-Bell.  Improper Dih.          LJ-14
-    7.57615e+02    4.61280e+03    1.88272e+02    2.34667e+02    5.93621e+02
+    7.80265e+00    5.22061e+01   -5.66043e-01    2.13052e-01    8.21699e+01
      Coulomb-14        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.
-    1.40061e+03   -9.84066e+02   -1.94881e+03    4.85471e+03    7.67345e+03
+    1.52253e+02   -8.12357e+01   -3.83526e+02   -1.70684e+02    8.21160e+02
    Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
-    1.25282e+04    1.25282e+04    3.52455e+02   -2.31716e-01    1.78171e-05
+    6.50477e+02    6.50477e+02    3.52096e+02    3.14717e-01    5.52874e-06
 
-DD  step 9 load imb.: force 90.5%
-
-
-step 20 Turning on dynamic load balancing, because the performance loss due to load imbalance is 41.5 %.
+DD  step 9 load imb.: force 37.8%
 
 
-step 200 Turning off dynamic load balancing, because it is degrading performance.
+step 20 Turning on dynamic load balancing, because the performance loss due to load imbalance is 21.3 %.
 
-Atom distribution over 8 domains: av 270 stddev 27 min 236 max 311
 
-step 2000 Turning on dynamic load balancing, because the performance loss due to load imbalance is 56.5 %.
+step 400 Turning off dynamic load balancing, because it is degrading performance.
+
+Atom distribution over 2 domains: av 115 stddev 1 min 114 max 116
+
+step 2000 Turning on dynamic load balancing, because the performance loss due to load imbalance is 32.4 %.
 
 
 step 2200 Turning off dynamic load balancing, because it is degrading performance.
 
-Atom distribution over 8 domains: av 270 stddev 29 min 213 max 310
+Atom distribution over 2 domains: av 115 stddev 2 min 113 max 117
 
 step 3000 Will no longer try dynamic load balancing, as it degraded performance.
-
-Writing checkpoint, step 150550 at Fri Nov  5 14:28:45 2021
-
 
 
 
 Received the INT signal, stopping within 20 steps
 
            Step           Time
-         191240      382.48000
+          37670       75.34000
 
-Writing checkpoint, step 191240 at Fri Nov  5 14:33:16 2021
+Writing checkpoint, step 37670 at Fri Nov 12 15:24:35 2021
 
 
    Energies (kJ/mol)
            Bond          Angle Ryckaert-Bell.  Improper Dih.          LJ-14
-    1.47691e+03    7.83225e+03    7.04784e+02    1.35929e+03    1.07929e+03
+    2.35665e+02    5.28400e+02    6.32227e+01    4.88256e+01    1.09939e+02
      Coulomb-14        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.
-    1.48898e+03   -3.69861e+03   -2.11392e+03    8.12898e+03    7.54500e+03
+    2.10277e+02   -2.39729e+02   -4.90205e+02    4.66395e+02    7.97633e+02
    Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
-    1.56740e+04    1.42142e+04    3.46555e+02    8.24535e-03    0.00000e+00
+    1.26403e+03    6.99392e+02    3.42008e+02   -3.99925e-01    0.00000e+00
 
 	<======  ###############  ==>
 	<====  A V E R A G E S  ====>
 	<==  ###############  ======>
 
-	Statistics over 191241 steps using 1913 frames
+	Statistics over 37671 steps using 377 frames
 
    Energies (kJ/mol)
            Bond          Angle Ryckaert-Bell.  Improper Dih.          LJ-14
-    1.57308e+03    7.94801e+03    7.46086e+02    1.30737e+03    1.06726e+03
+    1.61976e+02    5.28206e+02    5.53399e+01    5.18907e+01    1.13666e+02
      Coulomb-14        LJ (SR)   Coulomb (SR)      Potential    Kinetic En.
-    1.48486e+03   -3.43199e+03   -2.10288e+03    8.59180e+03    7.61953e+03
+    2.25395e+02   -2.25651e+02   -5.01637e+02    4.09187e+02    8.17574e+02
    Total Energy  Conserved En.    Temperature Pressure (bar)   Constr. rmsd
-    1.62113e+04    1.35152e+04    3.49978e+02   -1.16444e-04    0.00000e+00
+    1.22676e+03    6.95141e+02    3.50558e+02   -1.91477e-02    0.00000e+00
 
    Total Virial (kJ/mol)
-    2.58568e+03   -7.22579e+00   -2.23274e+01
-   -7.23088e+00    2.54496e+03    1.55948e+01
-   -2.23270e+01    1.56010e+01    2.49940e+03
+    2.74273e+02    1.16254e+01    1.23166e+01
+    1.16256e+01    2.98826e+02    1.00525e+01
+    1.23181e+01    1.00529e+01    2.91176e+02
 
    Pressure (bar)
-   -2.43258e-04    3.07543e-04    7.48466e-04
-    3.07711e-04   -4.68881e-04   -3.07242e-04
-    7.48453e-04   -3.07449e-04    3.62806e-04
+   -4.46829e-03   -9.55997e-03   -1.59822e-02
+   -9.56017e-03   -2.89547e-02   -1.31040e-02
+   -1.59841e-02   -1.31045e-02   -2.40201e-02
 
 
 	M E G A - F L O P S   A C C O U N T I N G
@@ -482,75 +479,73 @@ Writing checkpoint, step 191240 at Fri Nov  5 14:33:16 2021
 
  Computing:                               M-Number         M-Flops  % Flops
 -----------------------------------------------------------------------------
- Pair Search distance check            3317.287440       29855.587     0.4
- NxN RF Elec. + LJ [F]               210135.412304     7985145.668    94.5
- NxN RF Elec. + LJ [V&F]               2124.603800      114728.605     1.4
- NxN LJ [F]                              30.712640        1013.517     0.0
- NxN LJ [V&F]                             0.331520          14.255     0.0
- NxN RF Electrostatics [F]              661.995792       20521.870     0.2
- NxN RF Electrostatics [V&F]              6.723944         242.062     0.0
- 1,4 nonbonded interactions             724.803390       65232.305     0.8
- Reset In Box                            41.305680         123.917     0.0
- CG-CoM                                  41.312160         123.936     0.0
- Bonds                                  191.049759       11271.936     0.1
- Angles                                 817.746516      137381.415     1.6
- Impropers                              129.470157       26929.793     0.3
- RB-Dihedrals                           118.378179       29239.410     0.3
- Virial                                   4.823280          86.819     0.0
- Stop-CM                                  4.134240          41.342     0.0
- Calc-Ekin                               82.620000        2230.740     0.0
- Lincs                                  264.522283       15871.337     0.2
- Lincs-Mat                             1646.965908        6587.864     0.1
- Constraint-V                           529.040136        4232.321     0.1
- Constraint-Vir                           2.648057          63.553     0.0
+ Pair Search distance check              14.196340         127.767     0.3
+ NxN RF Elec. + LJ [F]                  959.127240       36446.835    84.2
+ NxN RF Elec. + LJ [V&F]                  9.730600         525.452     1.2
+ NxN RF Electrostatics [F]                3.882344         120.353     0.3
+ NxN RF Electrostatics [V&F]              0.041224           1.484     0.0
+ 1,4 nonbonded interactions              15.821820        1423.964     3.3
+ Reset In Box                             0.866180           2.599     0.0
+ CG-CoM                                   0.866870           2.601     0.0
+ Bonds                                    4.332165         255.598     0.6
+ Angles                                  16.273872        2734.010     6.3
+ Impropers                                2.034234         423.121     1.0
+ RB-Dihedrals                             2.636970         651.332     1.5
+ Virial                                   0.120960           2.177     0.0
+ Stop-CM                                  0.086940           0.869     0.0
+ Calc-Ekin                                1.733280          46.799     0.1
+ Lincs                                    5.035711         302.143     0.7
+ Lincs-Mat                               32.638680         130.555     0.3
+ Constraint-V                            10.071146          80.569     0.2
+ Constraint-Vir                           0.050534           1.213     0.0
 -----------------------------------------------------------------------------
- Total                                                 8450938.252   100.0
+ Total                                                   43279.439   100.0
 -----------------------------------------------------------------------------
 
 
     D O M A I N   D E C O M P O S I T I O N   S T A T I S T I C S
 
- av. #atoms communicated per step for force:  2 x 3512.2
- av. #atoms communicated per step for LINCS:  2 x 218.8
+ av. #atoms communicated per step for force:  2 x 113.1
+ av. #atoms communicated per step for LINCS:  2 x 11.5
 
 
  Dynamic load balancing report:
  DLB got disabled because it was unsuitable to use.
- Average load imbalance: 147.7%.
- The balanceable part of the MD step is 35%, load imbalance is computed from this.
- Part of the total run time spent waiting due to load imbalance: 52.4%.
+ Average load imbalance: 43.2%.
+ The balanceable part of the MD step is 58%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 25.2%.
 
-NOTE: 52.4 % of the available CPU time was lost due to load imbalance
+NOTE: 25.2 % of the available CPU time was lost due to load imbalance
       in the domain decomposition.
       You might want to use dynamic load balancing (option -dlb.)
 
 
      R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
 
-On 8 MPI ranks
+On 2 MPI ranks
 
  Computing:          Num   Num      Call    Wall time         Giga-Cycles
                      Ranks Threads  Count      (s)         total sum    %
 -----------------------------------------------------------------------------
- Domain decomp.         8    1      19125      11.370        209.571   1.0
- DD comm. load          8    1       1949       0.471          8.683   0.0
- DD comm. bounds        8    1         38       0.094          1.740   0.0
- Neighbor search        8    1      19125       5.592        103.066   0.5
- Comm. coord.           8    1     172116       5.396         99.466   0.5
- Force                  8    1     191241     453.735       8363.132  38.7
- Wait + Comm. F         8    1     191241     685.402      12633.152  58.5
- NB X/F buffer ops.     8    1     535473       0.665         12.253   0.1
- Write traj.            8    1        194       0.011          0.206   0.0
- Update                 8    1     191241       0.484          8.930   0.0
- Constraints            8    1     191241       6.731        124.059   0.6
- Comm. energies         8    1      19125       0.461          8.494   0.0
- Rest                                           0.620         11.431   0.1
+ Domain decomp.         2    1       3768       0.310          1.430   3.2
+ DD comm. load          2    1        431       0.001          0.004   0.0
+ DD comm. bounds        2    1         58       0.000          0.001   0.0
+ Neighbor search        2    1       3768       0.122          0.564   1.3
+ Comm. coord.           2    1      33903       0.073          0.338   0.8
+ Force                  2    1      37671       6.088         28.054  63.0
+ Wait + Comm. F         2    1      37671       2.635         12.143  27.3
+ NB X/F buffer ops.     2    1     105477       0.023          0.108   0.2
+ Write traj.            2    1         39       0.024          0.110   0.2
+ Update                 2    1      37671       0.028          0.131   0.3
+ Constraints            2    1      37671       0.276          1.271   2.9
+ Comm. energies         2    1       3768       0.015          0.067   0.2
+ Rest                                           0.061          0.281   0.6
 -----------------------------------------------------------------------------
- Total                                       1171.033      21584.184 100.0
+ Total                                          9.657         44.502 100.0
 -----------------------------------------------------------------------------
 
                Core t (s)   Wall t (s)        (%)
-       Time:     9368.262     1171.033      800.0
+       Time:       19.315        9.657      200.0
                  (ns/day)    (hour/ns)
-Performance:       28.220        0.850
-Finished mdrun on rank 0 Fri Nov  5 14:33:16 2021
+Performance:      674.042        0.036
+Finished mdrun on rank 0 Fri Nov 12 15:24:35 2021
