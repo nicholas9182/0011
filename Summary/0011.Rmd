@@ -516,4 +516,70 @@ rbind(a,c) %>%
 
 ```
 
+```{r pBTTT Dihedral QCC scans for paper, fig.width=14}
 
+RB <- function(C0,C1,C2,C3,C4,C5,Angle){
+        V <-    C0*cos(Angle*0.0174533)^0 +
+                -C1*cos(Angle*0.0174533)^1 +
+                C2*cos(Angle*0.0174533)^2 +
+                -C3*cos(Angle*0.0174533)^3 +
+                C4*cos(Angle*0.0174533)^4 +
+                -C5*cos(Angle*0.0174533)^5
+        return(V)
+}
+
+RB_tibble <- function(coefs,Angle){
+  
+      C0 <- as.numeric(coefs[1])
+      C1 <- as.numeric(coefs[2])
+      C2 <- as.numeric(coefs[3])
+      C3 <- as.numeric(coefs[4])
+      C4 <- as.numeric(coefs[5])
+      C5 <- as.numeric(coefs[6])
+  
+        V <-    C0*cos(Angle*0.0174533)^0 +
+                -C1*cos(Angle*0.0174533)^1 +
+                C2*cos(Angle*0.0174533)^2 +
+                -C3*cos(Angle*0.0174533)^3 +
+                C4*cos(Angle*0.0174533)^4 +
+                -C5*cos(Angle*0.0174533)^5
+        
+        rett <- as.tibble(data.frame(Angle_pred=Angle, Energy_pred=V))
+        return(rett)
+}
+
+a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_B3LYP/pBTTT.txt") %>% 
+  mutate(Oligomer="pBTTT",Method="B3lyp/6-311+g(d,p)") %>% mutate(Dihedral = "T-TT")
+
+b <-read.table("/Users/nicholassiemons/Dropbox/OBT/0064/Thiophene_dihedral_attempt3/DPP.txt") %>% 
+  mutate(Oligomer="pBTTT",Method="B3lyp/6-311+g(d,p)") %>% mutate(Dihedral = "T-T")
+
+
+rbind(a,b) %>% 
+  rename(Angle = V1, Energy = V2) %>% 
+  group_by(Dihedral) %>%
+  mutate(Energy = (Energy - min(Energy))*27211.3825435 ) %>% 
+  ungroup() %>% 
+  mutate( ang_group = abs(Angle) ) %>% 
+  group_by( ang_group, Dihedral) %>%
+  mutate(Energy = min(Energy)) %>% 
+  ungroup() %>% select(-c(ang_group)) %>% 
+  nest(data = c(Angle,Energy)) %>% 
+  mutate( 
+    fit = map( data , ~ nls( .x$Energy ~ RB(C0,C1,C2,C3,C4,C5,Angle),
+              start=list(C0=0,C1=0,C2=0,C3=0,C4=0,C5=0),
+              data= .x) ) , 
+    coefs = map( fit , tidy ) ) %>% 
+  unnest(coefs) %>% 
+  select(-c(std.error, statistic, p.value,fit)) %>% 
+  pivot_wider(names_from = term,  values_from = estimate) %>% 
+  nest( Parameters = c(C0,C1,C2,C3,C4,C5)) %>% 
+  mutate( predict = map( Parameters , ~ RB_tibble( coefs = .x , Angle = seq(-180,180,5) ) ) ) %>% 
+  unnest(predict)  %>% unnest(data) %>% 
+  ggplot(aes(x = Angle_pred,  y = Energy_pred , colour = Dihedral)) +
+    geom_line(size=1.5) +
+    geom_point(aes(x=Angle,  y = Energy),size=2) +
+    labs(x = "Angle [degrees]", y = "E [kJ/mol]")
+
+
+```    
