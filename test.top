@@ -1,8 +1,0 @@
-#include "OBT.ff/forcefield.itp"
-#include "hex14_TT.itp"
-
-[ system ]
-test
-
-[ molecules ]
-h14TT           1
