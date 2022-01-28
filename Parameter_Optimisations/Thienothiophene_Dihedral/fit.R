@@ -1,5 +1,5 @@
 library('pracma')
-
+library('tidyverse')
 
 RB <- function(C0,C1,C2,C3,C4,C5,Angle){
 	V <-    C0*cos(Angle*0.0174533)^0 + 
@@ -20,7 +20,7 @@ RB_fit <- function(D) {
 		nls.control(maxiter=1000)) 
 }
 
-gaussian <- read.table("~/Dropbox/OBT/0013/thienothiophene_dihedral/inner.txt", header=FALSE) %>% 
+gaussian <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_B3LYP/pg2T_TT.txt", header=FALSE) %>% 
 	as_tibble() %>% 
 	rename(Angle=V1, Energy=V2) %>%
 	mutate(Energy= Energy*27211.4/10.36) %>%
@@ -44,7 +44,7 @@ MD_scan_on <- read.table("MD_scan_on.txt") %>%
 	mutate(Energy = Energy - min(Energy) ) %>%
 	rename(Energy_MD_on = Energy) %>% 
 	arrange(Angle) %>%
-	dplyr::filter(Angle < 180) 
+	dplyr::filter(Angle < 180) %>% print()
 
 MD_scan_off %>%
 	mutate(Energy_w = gaussian$Energy_w) %>%

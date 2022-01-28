@@ -1,6 +1,6 @@
 source ~/.zshrc
 
-for i in $(seq -170 10 180)
+for i in $(seq -175 5 180)
 do
 	(
 	cat <<- EOF

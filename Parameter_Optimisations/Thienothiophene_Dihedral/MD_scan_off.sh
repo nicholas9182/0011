@@ -14,7 +14,7 @@ ex -snc '$-11,$d|x' mon.itp
 sed -i '' 's/Other.*/mon      3/g' mon.itp
 
 # Loop over the different angle restraints
-for i in $(seq -170 10 180)
+for i in $(seq -175 5 180)
 do
 	(
 	cat <<- EOF 

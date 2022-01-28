@@ -417,7 +417,7 @@ RB <- function(C0,C1,C2,C3,C4,C5,Angle){
         return(V)
 }
 
-a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_files/pg2T_TT.txt") %>% mutate(Method="B3LYP") 
+a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_B3LYP/pg2T_TT.txt") %>% mutate(Method="B3LYP") 
 b <- read.table("/Users/nicholassiemons/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/MD_scan_off.txt") %>% mutate(Method = "MD_DOF_off") 
 
 rbind(a,b) %>% 
@@ -583,3 +583,4 @@ rbind(a,b) %>%
 
 
 ```    
+

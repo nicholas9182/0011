@@ -1,17 +1,17 @@
 ;
 ;	File 'topol.top' was generated
 ;	By user: nicholassiemons (501)
-;	On host: Nicholass-MacBook-Pro-3.local
-;	At date: Thu Nov 19 08:23:35 2020
+;	On host: dyn1149-142.insecure.ic.ac.uk
+;	At date: Fri Jan 28 13:22:48 2022
 ;
 ;	This is a standalone topology file
 ;
 ;	Created by:
-;	                    :-) GROMACS - gmx pdb2gmx, 2018.2 (-:
+;	                    :-) GROMACS - gmx pdb2gmx, 2018.8 (-:
 ;	
-;	Executable:   /usr/local/gromacs/bin/gmx
+;	Executable:   /usr/local/gromacs/bin//gmx
 ;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /Users/nicholassiemons/Dropbox/OBT/0011/Thienothiophene_Dihedral_Optimisation
+;	Working dir:  /Users/nicholassiemons/Dropbox/OBT/0011/Parameter_Optimisations/Thienothiophene_Dihedral
 ;	Command line:
 ;	  gmx pdb2gmx -f pre_eq_pdb/mon_0.pdb
 ;	Force field was read from current directory or a relative path - path added.
@@ -304,7 +304,7 @@ Other               3
 
 [ system ]
 ; Name
-Glycine aRginine prOline Methionine Alanine Cystine Serine
+S  C  A  M  O  R  G
 
 [ molecules ]
 ; Compound        #mols

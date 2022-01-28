@@ -604,7 +604,7 @@
  CBB    CE      CR      SR      3       18.435		3.967		-26.934		1.571		12.485		-1.616	; QCC optimised
 
 ; backbone thienothiophene spacer 
- CBB	CE	CRR	SRR	3	18.6003		-2.4443		-26.159		0.9575		11.511		-2.4912	; QCC optimised
+ CBB	CE	CRR	SRR	3	8.4001		5.5525		-24.063		0.0398		12.350		-0.2674	; QCC optimised
 
 ; NDI unit 
  CN	CN	CN	CN	3	1.3284		 4.715		 59.174		 -93.290	 28.111		 0.000   ; Bhatta J Phys Chem
