@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "but6_TT.itp"
+#include "hex6_TT.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-B6 		1
+H6 		1
