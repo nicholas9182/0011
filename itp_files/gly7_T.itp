@@ -1,28 +1,6 @@
-;
-;	File 'topol.top' was generated
-;	By user: nicholassiemons (501)
-;	On host: Nicholass-MacBook-Pro.local
-;	At date: Fri Feb 25 08:07:25 2022
-;
-;	This is a standalone topology file
-;
-;	Created by:
-;	                    :-) GROMACS - gmx pdb2gmx, 2018.8 (-:
-;	
-;	Executable:   /usr/local/gromacs/bin//gmx
-;	Data prefix:  /usr/local/gromacs
-;	Working dir:  /Users/nicholassiemons/Dropbox/OBT/0011
-;	Command line:
-;	  gmx pdb2gmx -f temp.gro
-;	Force field was read from current directory or a relative path - path added.
-;
-
-; Include forcefield parameters
-#include "./OBT.ff/forcefield.itp"
-
 [ moleculetype ]
 ; Name            nrexcl
-Other               3
+G7               3
 
 [ atoms ]
 ;   nr       type  resnr residue  atom   cgnr     charge       mass  typeB    chargeB      massB
@@ -3894,15 +3872,3 @@ Other               3
   521   520   522   525     2 
   522   521   523   590     2 
 
-; Include Position restraint file
-#ifdef POSRES
-#include "posre.itp"
-#endif
-
-[ system ]
-; Name
-Built with Packmol
-
-[ molecules ]
-; Compound        #mols
-Other               1
