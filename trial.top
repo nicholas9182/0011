@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "gly10.itp"
+#include "eth10.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-G10 		1
+E10 		1
