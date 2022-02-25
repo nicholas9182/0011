@@ -128,8 +128,6 @@
  Hr3	HG	+0.096	36
 
 
-
-
 ; bithiophene backbone spacer
  CT1	CR	+0.052	33
  CT2	CR	-0.222	34
@@ -587,8 +585,6 @@ CD3	HD
  Cr	Hr2
  Cr	Hr3
 
-
-
 ; bithiophene backbone spacer
  CT1	CT2
  CT2	CT3
@@ -597,7 +593,6 @@ CD3	HD
  ST1	CT1
  CT2	HT2
  CT3	HT3
-
 
 ; oxybithiophene - bithiophene spacer
  CD4	CT1

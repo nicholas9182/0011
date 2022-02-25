@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "eth7_T.itp"
+#include "but7_T.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-E7 		1
+B7 		1

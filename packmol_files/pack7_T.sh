@@ -69,7 +69,6 @@ fixed 70.5 0 0 0 0 0
 inside box 0. 0. 0. 0 0 0 
 end structure 
 
-
 EOF
 
 rm \#*
