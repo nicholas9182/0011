@@ -1,9 +1,9 @@
 #include "OBT.ff/forcefield.itp"
-#include "gly10.itp"
+#include "itp_files/pgT2_TT_teg_20mer.itp"
 
 [ system ]
 test
 
 [ molecules ]
 ; Compound        #mols
-G10 		1
+pgT2_TT		1
