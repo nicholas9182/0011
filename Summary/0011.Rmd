@@ -584,3 +584,32 @@ rbind(a,b) %>%
 
 ```    
 
+```{r Dihedrals for Giovanni Paper, fig.width=6}
+
+a <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pBTTT_thiophene_thienothiophene/QCC_B3LYP/pBTTT.txt") %>% mutate(Oligomer="pBTTT" , Dihedral = "T-TT")
+b <- read.table("/Users/nicholassiemons/Dropbox/OBT/0064/Thiophene_dihedral_attempt3/DPP.txt") %>% mutate(Oligomer="pBTTT", Dihedral = "T-T")
+c <- read.table("/Users/nicholassiemons/Dropbox/OBT/0064/Thiophene_dihedral_attempt3/DPP.txt") %>% mutate(Oligomer="gpBTTT", Dihedral = "T-T")
+d <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/gpBTTT_thiophene_thienothiophene/QCC_B3LYP/pBTTT.txt") %>% mutate(Oligomer="gpBTTT", Dihedral = "T-TT")
+e <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/pgT2_TT_thiophene_thienothiophene/QCC_B3LYP/pg2T_TT.txt") %>% mutate(Oligomer="p(g2T-TT)", Dihedral = "T-TT")
+f <- read.table("~/Dropbox/OBT/0011/Parameter_Optimisations/Inner_Dihedral/QCC_files/Inner_scan_b3lyp_thiophene/inner.txt") %>% mutate(Oligomer="p(g2T-TT)", Dihedral = "T-T")
+
+rbind(a,b,c,d,e,f) %>% 
+  group_by(Dihedral, Oligomer) %>%
+  mutate( V2 = V2 - min(V2) ) %>% 
+  mutate(Angle_abs = abs(V1)) %>%
+  group_by(Angle_abs, Dihedral, Oligomer) %>% 
+  mutate( V2 = min(V2) ) %>%
+  ungroup() %>% 
+  mutate( V2 = V2 * 27211.382 ) %>% 
+  select(V2, Oligomer, Dihedral, Angle_abs) %>% 
+  mutate( Angle = -Angle_abs ) %>% 
+  pivot_longer(names_to = "rem", values_to = "Angles", cols = c(Angle, Angle_abs)) %>% 
+  ggplot(aes(x = Angles , y = V2 )) +
+    geom_point(size=0.5) +
+    geom_line() +
+    facet_grid(Dihedral ~ Oligomer) +
+    labs(x = "Angle [degrees]", y = "E [meV]") +
+    theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+ggsave("~/Dropbox/STM conjugated polymers Imperial Warwick/JN_group_images/Dihedrals.pdf", width=10, height=7)
+
+```
