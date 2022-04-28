@@ -110,6 +110,7 @@
 
 ; mixed side chain
  CL!	CG	1	0.15290	224262.4	; from Drew P , CT to CT
+ CG!	CL	1	0.15290	224262.4	; from Drew P , CT to CT
  CL	CG	1	0.15290	224262.4	; from Drew P , CT to CT
  
 ; thiophene-sidechain
@@ -240,10 +241,15 @@
 
 ; mixed side chains
  OT	CL!	CG	1	109.500	418.400	; from Drew P
+ OT	CG!	CL	1	109.500	418.400	; from Drew P
  OG	CG	CL	1	109.500	418.400	; from Drew P
  CG	CL!	HL	1	110.700	313.800	; from Drew opls_139 - opls_139 - opls_140
+ CL	CG!	HG	1	110.700	313.800	; from Drew opls_139 - opls_139 - opls_140
  CL!	CG	HG	1	110.700	313.800 ; from Drew opls_139 - opls_139 - opls_140
+ CG!	CL	HL	1	110.700	313.800 ; from Drew opls_139 - opls_139 - opls_140
  CL!	CG	CG	1	112.700	488.273 ; from Drew opls_139 - opls_139 - opls_139
+ CG!	CL	CL	1	112.700	488.273 ; from Drew opls_139 - opls_139 - opls_139
+ CG!	CL	CG	1	112.700	488.273 ; from Drew opls_139 - opls_139 - opls_139
  CL!	CL	CG	1	112.700	488.273 ; from Drew opls_139 - opls_139 - opls_139
  CG	CL	HL	1	110.700	313.800	; from Drew opls_139 - opls_139 - opls_140
  CL	CG	HG	1	110.700	313.800	; from Drew opls_139 - opls_139 - opls_140
@@ -554,9 +560,13 @@
 
 ; thiophene - mixed sidechain
  CBB	OT	CL!	CG	3        1.715		2.845		1.046		-5.607		-0.000		0.000	; from Drew   
+ CBB	OT	CG!	CL	3        1.715		2.845		1.046		-5.607		-0.000		0.000	; from Drew   
  OT	CL!	CG	CG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000	; from Drew
+ OT	CG!	CL	CG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000	; from Drew
+ OT	CG!	CL	CL	3	-1.151		1.151		0.000		-0.000		-0.000		0.000	; from Drew
  OT	CL!	CL	CG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000	; from Drew
  OT	CL!	CG	HG	3	-1.151		1.151		0.000		-0.000		-0.000		0.000	; from Drew
+ 
 
 ; thiophene - thiophene
  CBB    CAA     CAA     ST	3        4.472		-8.089		-11.827		-3.357		1.898		6.234	; QCC optimised
@@ -582,8 +592,11 @@
 ; mixed sidechain 
  CG	OG	CG	CL	3	 1.715		2.845		1.046		-5.607		-0.000		0.000	; from Drew
  OG	CG	CG	CL!	3	-1.151		1.151		0.000		-0.000		0.000		0.000	; from Drew
+ OG	CG	CL	CG!	3	-1.151		1.151		0.000		-0.000		0.000		0.000	; from Drew
  CL!	CL	CG	CG	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139
  CL!	CL	CL	CG	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139
+ CG!	CL	CL	CG	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139
+ CG!	CL	CL	CL	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139
  CL	CL	CG	CG	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139 
  CL	CL	CL	CG	3	2.9288		-1.4644		0.209		-1.6736		0.000		0.000	; opls_139 - opls_139 - opls_139 - opls_139 
  HL	CL	CG	OG	3	 0.979		2.937		0.000		-3.916		-0.000 		0.000	; from Drew
@@ -600,6 +613,7 @@
  ST     OT      CL!      CG      3       0.000		0.000		0.000		0.000		0.000		0.000
  ST     OT      CL!      CL      3       0.000		0.000		0.000		0.000		0.000		0.000
  ST     OT      CG!      CG      3       0.000		0.000		0.000		0.000		0.000		0.000
+ ST     OT      CG!      CL      3       0.000		0.000		0.000		0.000		0.000		0.000
 
 ; backbone thiophene spacer
  CBB    CE      CR      SR      3       18.435		3.967		-26.934		1.571		12.485		-1.616	; QCC optimised

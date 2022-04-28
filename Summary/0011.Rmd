@@ -609,6 +609,7 @@ rbind(a,b,c,d,e,f) %>%
     geom_line() +
     facet_grid(Dihedral ~ Oligomer) +
     labs(x = "Angle [degrees]", y = "E [meV]") +
+    scale_x_continuous(breaks = scales::pretty_breaks(n = 14)) +
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 ggsave("~/Dropbox/STM conjugated polymers Imperial Warwick/JN_group_images/Dihedrals.pdf", width=10, height=7)
 

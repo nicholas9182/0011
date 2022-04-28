@@ -19,40 +19,40 @@
 [ atoms ]
 ; Left thiophene unit (Sinister)
 ; name type charge chargegroup
- CS1	CAA	-0.099	1
- CS2 	CBB	+0.305	2
- CS3	CBB	-0.271	3
- CS4	CE	-0.149	4
- SS	ST	-0.051	5
- OS	OT	-0.233	6
- HS	HT	+0.136	3 
+ CS1	CAA	-0.101	1
+ CS2 	CBB	+0.303	2
+ CS3	CBB	-0.273	3
+ CS4	CE	-0.151	4
+ SS	ST	-0.053	5
+ OS	OT	-0.235	6
+ HS	HT	+0.134	3 
 
 ; Right thiophene unit (Dextrose) 
- CD1	CAA	+0.014	7
- CD2	CBB	+0.262	8
- CD3	CBB	-0.325	9
- CD4	CE	+0.094	10
- SD	ST      -0.203	11
- OD	OT	-0.284 	12
- HD	HT	+0.222	9
+ CD1	CAA	+0.013	7
+ CD2	CBB	+0.261	8
+ CD3	CBB	-0.326	9
+ CD4	CE	+0.093	10
+ SD	ST      -0.204	11
+ OD	OT	-0.285 	12
+ HD	HT	+0.221	9
 
 ; Left sidechain 
- C0	CL!	+0.031	15
- H01	HL	+0.032	15
- H02	HL	+0.032	15
- C1	CL	+0.108	16
- H11	HL	-0.013	16
- H12	HL	-0.013	16
- C2	CL	-0.017	17
- H21	HL	-0.016	17
- H22	HL	-0.016	17
- C3 	CG	+0.034	13
- H31	HG	-0.027	13
- H32	HG	-0.027	13
- C4 	CG	+0.017	14
- H41	HG	+0.090	14
- H42	HG	+0.090	14
- O5 	OG	-0.389	15
+ C0	CG!	+0.030	15
+ H01	HG	+0.031	15
+ H02	HG	+0.031	15
+ C1	CL	+0.107	16
+ H11	HL	-0.014	16
+ H12	HL	-0.014	16
+ C2	CL	-0.018	17
+ H21	HL	-0.017	17
+ H22	HL	-0.017	17
+ C3 	CL	+0.033	13
+ H31	HL	-0.028	13
+ H32	HL	-0.028	13
+ C4 	CG	+0.016	14
+ H41	HG	+0.089	14
+ H42	HG	+0.089	14
+ O5 	OG	-0.390	15
  C6 	CG	+0.009	16
  H61	HG	+0.090	16
  H62	HG	+0.090	16
@@ -81,22 +81,22 @@
  
 
 ; Right sidechain 
- Caa	CL!	+0.213	29
- Ha1	HL	-0.040	29
- Ha2	HL	-0.040	29
- Cb	CL	+0.076	30
- Hb1	HL	-0.021	30
- Hb2	HL	-0.021	30
- Cc	CL	-0.007	31
- Hc1	HL	-0.024	31
- Hc2	HL	-0.024	31
- Cd 	CG	+0.082	23
- Hd1	HG	-0.034	23
- Hd2	HG	-0.034	23
- Ce 	CG	+0.017	24
- He1	HG	+0.090	24
- He2	HG	+0.090	24
- Of 	OG	-0.389	25
+ Caa	CG!	+0.212	29
+ Ha1	HG	-0.041	29
+ Ha2	HG	-0.041	29
+ Cb	CL	+0.075	30
+ Hb1	HL	-0.022	30
+ Hb2	HL	-0.022	30
+ Cc	CL	-0.008	31
+ Hc1	HL	-0.025	31
+ Hc2	HL	-0.025	31
+ Cd 	CL	+0.081	23
+ Hd1	HL	-0.035	23
+ Hd2	HL	-0.035	23
+ Ce 	CG	+0.016	24
+ He1	HG	+0.089	24
+ He2	HG	+0.089	24
+ Of 	OG	-0.390	25
  Cg 	CG	+0.009	26
  Hg1	HG	+0.090	26
  Hg2	HG	+0.090	26
@@ -291,9 +291,9 @@ CD3	HD
 [ atoms ]
 ; Left thiophene unit (Sinister)
 ; name type charge chargegroup
- CS1	CAA	-0.004	1
- CS2 	CBB	+0.233	2
- CS3	CBB	-0.347	3
+ CS1	CAA	-0.003	1
+ CS2 	CBB	+0.234	2
+ CS3	CBB	-0.346	3
  CS4	CE	+0.119	4
  SS	ST	-0.198	5
  OS	OT	-0.208	6
@@ -301,8 +301,8 @@ CD3	HD
 
 
 ; Right thiophene unit (Dextrose) 
- CD1	CAA	-0.004	7
- CD2	CBB	+0.233	8
+ CD1	CAA	-0.003	7
+ CD2	CBB	+0.234	8
  CD3	CBB	-0.347	9
  CD4	CE	+0.119	10
  SD	ST      -0.198	11
@@ -311,18 +311,18 @@ CD3	HD
 
 
 ; Left sidechain 
- C0	CL!	+0.064	15
- H01	HL	+0.008	15
- H02	HL	+0.008	15
+ C0	CG!	+0.064	15
+ H01	HG	+0.008	15
+ H02	HG	+0.008	15
  C1	CL	+0.116	16
  H11	HL	-0.014	16
  H12	HL	-0.014	16
  C2	CL	-0.045	17
  H21	HL	-0.002	17
  H22	HL	-0.002	17
- C3 	CG	+0.020	13
- H31	HG	-0.021	13
- H32	HG	-0.021	13
+ C3 	CL	+0.020	13
+ H31	HL	-0.021	13
+ H32	HL	-0.021	13
  C4 	CG	+0.017	14
  H41	HG	+0.090	14
  H42	HG	+0.090	14
@@ -357,18 +357,18 @@ CD3	HD
  
 
 ; Right sidechain 
- Caa	CL!	+0.064	29
- Ha1	HL	+0.008	29
- Ha2	HL	+0.008	29
+ Caa	CG!	+0.064	29
+ Ha1	HG	+0.008	29
+ Ha2	HG	+0.008	29
  Cb	CL	+0.116	30
  Hb1	HL	-0.014	30
  Hb2	HL	-0.014	30
  Cc	CL	-0.045	31
  Hc1	HL	-0.002	31
  Hc2	HL	-0.002	31
- Cd 	CG	+0.020	23
- Hd1	HG	-0.021	23
- Hd2	HG	-0.021	23
+ Cd 	CL	+0.020	23
+ Hd1	HL	-0.021	23
+ Hd2	HL	-0.021	23
  Ce 	CG	+0.017	24
  He1	HG	+0.089	24
  He2	HG	+0.089	24
@@ -581,18 +581,18 @@ CD3	HD
 
 
 ; Left sidechain 
- C0	CL!	+0.213	15
- H01	HL	-0.040	15
- H02	HL	-0.040	15
+ C0	CG!	+0.213	15
+ H01	HG	-0.040	15
+ H02	HG	-0.040	15
  C1	CL	+0.076	16
  H11	HL	-0.021	16
  H12	HL	-0.021	16
  C2	CL	-0.007	17
  H21	HL	-0.024	17
  H22	HL	-0.024	17
- C3 	CG	+0.082	13
- H31	HG 	-0.039	13
- H32	HG 	-0.039	13
+ C3 	CL	+0.082	13
+ H31	HL 	-0.039	13
+ H32	HL 	-0.039	13
  C4 	CG 	+0.017	14
  H41	HG 	+0.089	14
  H42	HG 	+0.090	14
@@ -627,18 +627,18 @@ CD3	HD
  
 
 ; Right sidechain 
- Caa	CL!	+0.031	29
- Ha1	HL	+0.032	29
- Ha2	HL	+0.032	29
+ Caa	CG!	+0.031	29
+ Ha1	HG	+0.032	29
+ Ha2	HG	+0.032	29
  Cb	CL	+0.108	30
  Hb1	HL	-0.013	30
  Hb2	HL	-0.013	30
  Cc	CL	-0.017	31
  Hc1	HL	-0.016	31
  Hc2	HL	-0.016	31
- Cd 	CG	+0.034	23
- Hd1	HG 	-0.027	23
- Hd2	HG 	-0.027	23
+ Cd 	CL	+0.034	23
+ Hd1	HL 	-0.027	23
+ Hd2	HL 	-0.027	23
  Ce 	CG 	+0.017	24
  He1	HG 	+0.090	24
  He2	HG 	+0.090	24
@@ -821,9 +821,5 @@ CD3	HD
 
 ; between monomers
  CS4	CS3	SS	-CD4	
-
-
-
-
 
 
